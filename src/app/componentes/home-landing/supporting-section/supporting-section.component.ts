@@ -1,11 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-supporting-section',
   templateUrl: './supporting-section.component.html',
-  styleUrls: ['./supporting-section.component.css'],
+  styleUrls: [
+    './supporting-section.component.css',
+    '../home-landing.component.css',
+  ],
 })
 export class SupportingSectionComponent implements OnInit {
   @Input() title: string;

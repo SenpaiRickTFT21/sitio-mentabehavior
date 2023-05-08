@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-destacados',
   templateUrl: './destacados.component.html',
-  styleUrls: ['./destacados.component.css'],
+  styleUrls: ['./destacados.component.css', '../home-landing.component.css'],
 })
 export class DestacadosComponent implements OnInit {
   articulos: Articulo[] = [];

@@ -1,5 +1,9 @@
-.destacados-container{
-    background-color: #d7dbe3;
-    width: 100%;
-    padding-top: 5rem;
+.destacados-container {
+  background-color: #515b6c;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+h2 {
+  color: #ffff;
 }
