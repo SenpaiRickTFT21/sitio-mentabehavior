@@ -1,0 +1,106 @@
+.billboard {
+  position: relative;
+  /*height: 100vh;*/
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../../../assets/img/brain-bg.jpg");
+  z-index: 1;
+}
+
+.billboard-cta-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.sub-title {
+  font-size: 3.15rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  font-size: 1.35rem;
+  font-weight: 200;
+  border: none;
+  border-radius: 5px;
+  background-color: #1bb1c6;
+  color: #fff;
+  cursor: pointer;
+  min-width: 12rem;
+  max-width: 50%;
+  flex-grow: 1;
+}
+
+.button:hover {
+  background-color: #47c6d6;
+}
+
+.test-btn {
+  background-color: #f57730;
+}
+
+.test-btn:hover {
+  background-color: #f9975e;
+}
+
+section {
+  background-color: #ffffff;
+}
+
+#myModal div {
+  padding-top: 10rem;
+}
+
+.modal-body {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.modal-body button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1450px) {
+  .billboard-cta-container {
+    width: auto;
+  }
+  .sub-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sub-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}

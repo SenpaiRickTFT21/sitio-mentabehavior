@@ -1,0 +1,70 @@
+<div class="grid">
+  <div class="g-col-3"></div>
+  <ng-container
+    *ngTemplateOutlet="logged ? welcomeMessage : createAccount"
+  ></ng-container>
+  <ng-template #createAccount>
+    <div class="crear-cuenta-container mb-3 g-col-6">
+      <h1>Crea una cuenta</h1>
+      <div>
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input
+          type="password"
+          id="inputPassword5"
+          class="form-control"
+          aria-labelledby="passwordHelpBlock"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+        <div id="passwordHelpBlock" class="form-text">
+          Tu password debe ser de 6 caracteres como mínimo.
+        </div>
+      </div>
+      <div class="botones-container">
+        <button
+          type="button"
+          class="btn btn-primary btn-md ingresa-button"
+          (click)="register()"
+        >
+          Crear cuenta
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-outline-secondary google-btn"
+          (click)="registerGoogle()"
+        >
+          <div>
+            <img
+              width="16"
+              alt='Google "G" Logo'
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+            />
+            Ingresar con Google
+          </div>
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #welcomeMessage>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Bienvenido!</h4>
+    <p>Has creado tu cuenta con éxito</p>
+    <hr />
+    <p class="mb-0">Ya puedes disfrutar el contenido exclusivo.</p>
+  </div>
+</ng-template>

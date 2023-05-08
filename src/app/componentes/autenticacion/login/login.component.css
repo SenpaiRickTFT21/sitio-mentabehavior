@@ -1,0 +1,69 @@
+h1 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.login-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: -1.5rem -5rem -5rem -5rem;
+  height: 100%;
+}
+.ingresa-container {
+  display: flex;
+  padding: 2rem 5rem;
+  flex-grow: 1;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.no-cuenta-container {
+  flex-grow: 2;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dce1ec;
+  padding: 3rem;
+  margin-bottom: -1.5rem;
+}
+.no-cuenta-container button {
+  font-size: 1.1rem;
+  padding: 0;
+  margin-bottom: 0.15rem;
+}
+.no-cuenta-container img {
+  width: 150px;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+.google-btn img {
+  margin-right: 0.25rem;
+}
+
+.botones-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  height: 45px;
+  margin-top: 1.5rem;
+}
+
+.botones-container > * {
+  flex-grow: 1;
+  flex-basis: 50%;
+}

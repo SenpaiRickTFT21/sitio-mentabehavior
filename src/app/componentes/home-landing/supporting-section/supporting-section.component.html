@@ -1,0 +1,23 @@
+<div class="supporting-section-container">
+  <div class="description-container">
+    <h2>{{ title }}</h2>
+    <p>
+      {{ description }}
+      <br /><button
+        type="button"
+        class="btn btn-link"
+        (click)="navigateToArticle(articuloID)"
+      >
+        Seguir leyendo...
+      </button>
+    </p>
+  </div>
+  <div class="img-container">
+    <!--
+    <div
+      [style.background-image]="'url(' + backgroundImageUrl + ')'"
+      class="background-image"
+    ></div>-->
+    <img src="{{ backgroundImageUrl }}" />
+  </div>
+</div>
