@@ -11,6 +11,7 @@ import { User } from 'firebase/auth';
 export class TopNavComponent implements OnInit {
   loggedIn = false;
   userEmail: string | undefined;
+  isCollapsed: boolean = true;
 
   constructor(private userService: UserService, private router: Router) {}
 

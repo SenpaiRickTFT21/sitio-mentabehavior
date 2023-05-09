@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,12 +15,17 @@ export class SupportingSectionComponent implements OnInit {
   @Input() backgroundImageUrl: string;
   @Input() articuloID: string;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private renderer: Renderer2,
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit(): void {}
 
   navigateToArticle(article) {
     //console.log('Selected article:', article);
     this.router.navigate(['/articulo', this.articuloID]);
+    this.renderer.setProperty(window, 'scrollTo', 0);
   }
 }
