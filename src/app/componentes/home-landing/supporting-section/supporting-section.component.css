@@ -45,6 +45,12 @@ button {
   margin-bottom: 0.35rem;
 }
 
+@media (max-width: 1400px) {
+  img {
+    padding: 0 2rem !important;
+  }
+}
+
 @media (max-width: 767.98px) {
   .supporting-section-container > * {
     flex: auto;
