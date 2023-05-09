@@ -80,13 +80,29 @@ section {
 }
 
 .modal-body {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .modal-body button {
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  padding-bottom: 0;
+}
+.test-img-container img {
+  width: 60px;
+  border-radius: 50%;
+}
+.test-tipo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.test-tipo-container p {
+  padding-left: 0.75rem;
 }
 
 @media (max-width: 1450px) {
