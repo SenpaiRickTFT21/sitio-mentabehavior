@@ -103,4 +103,7 @@ section {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
+  .button {
+    max-width: 95%;
+  }
 }

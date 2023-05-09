@@ -1,9 +1,122 @@
 .destacados-container {
-  background-color: #515b6c;
+  background: rgb(77, 95, 122);
+  background: linear-gradient(
+    135deg,
+    rgba(77, 95, 122) 0%,
+    rgb(51, 67, 90) 55%,
+    rgba(48, 63, 85, 1) 100%
+  );
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 4rem;
+  color: #ffff;
 }
 
-h2 {
+h2,
+h3 {
   color: #ffff;
+}
+
+h3 {
+  font-weight: 400 !important;
+  font-size: 2.1rem;
+}
+
+.secciones {
+  padding-top: 5rem;
+}
+.secciones-container {
+  background-color: rgb(0, 0, 0);
+  height: 22rem;
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.secciones-container > * {
+  flex-basis: 33.33%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.seccion-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  float: left;
+}
+
+.seccion-item:hover {
+  filter: brightness(1.75);
+  cursor: pointer;
+}
+
+.seccion-title-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  flex-basis: 60%;
+  height: 6rem;
+  padding: 1.5rem;
+  justify-content: end;
+  display: flex;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.tdah,
+.padres,
+.hijos {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.tdah:hover,
+.tdah:focus,
+.padres:hover,
+.padres:focus,
+.hijos:hover,
+.hijos:focus {
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  transform-origin: bottom 10px;
+}
+
+.tdah {
+  background: linear-gradient(45deg, rgba(7, 0, 72, 0.8), rgba(76, 3, 109, 0.8)),
+    url("../../../../assets/img/electrodos.jpg");
+}
+
+.padres {
+  background: linear-gradient(45deg, rgba(7, 0, 72, 0.6), rgba(87, 65, 34)),
+    url("../../../../assets/img/padres.webp");
+}
+
+.hijos {
+  background: linear-gradient(
+      45deg,
+      rgba(7, 0, 72, 0.8),
+      rgba(255, 131, 7, 0.8)
+    ),
+    url("../../../../assets/img/jovenes.jpeg");
+}
+
+@media (max-width: 1199.98px) {
+  .secciones-container {
+    height: 30rem;
+  }
+  .secciones {
+    display: flex;
+  }
+  .secciones-container {
+    flex-grow: 1;
+  }
+  .secciones-container > * {
+    flex-basis: 100%;
+  }
 }

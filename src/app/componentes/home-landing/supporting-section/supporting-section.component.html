@@ -1,23 +1,27 @@
-<div class="supporting-section-container">
-  <div class="description-container">
-    <h2>{{ title }}</h2>
-    <p>
-      {{ description }}
-      <br /><button
-        type="button"
-        class="btn btn-link"
-        (click)="navigateToArticle(articuloID)"
-      >
-        Seguir leyendo...
-      </button>
-    </p>
-  </div>
-  <div class="img-container">
-    <!--
+<section class="grid">
+  <div class="d-none d-sm-block g-col-2 g-col-md-2 g-col-sm-1"></div>
+  <div class="g-lg-col-8 g-col-md-8 g-col-sm-12 supporting-section-container">
+    <div class="description-container">
+      <h2>{{ title }}</h2>
+      <p>
+        {{ description }}
+        <br /><button
+          type="button"
+          class="btn btn-link"
+          (click)="navigateToArticle(articuloID)"
+        >
+          Seguir leyendo...
+        </button>
+      </p>
+    </div>
+    <div class="img-container">
+      <!--
     <div
       [style.background-image]="'url(' + backgroundImageUrl + ')'"
       class="background-image"
     ></div>-->
-    <img src="{{ backgroundImageUrl }}" />
+      <img src="{{ backgroundImageUrl }}" />
+    </div>
   </div>
-</div>
+  <div class="d-none d-sm-block g-col-2 g-col-md-2 g-col-sm-1"></div>
+</section>
