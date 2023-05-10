@@ -1,61 +1,81 @@
-<div class="mb-3 login-container">
-  <div class="ingresa-container">
-    <h1>Ingresa para disfrutar del contenido</h1>
-    <div class="login-form-container">
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          [(ngModel)]="email"
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="inputPassword5" class="form-label">Password</label>
-        <input
-          type="password"
-          id="inputPassword5"
-          class="form-control"
-          aria-labelledby="passwordHelpBlock"
-          [(ngModel)]="password"
-        />
-      </div>
-    </div>
-    <div class="botones-container">
-      <button
-        type="button"
-        class="btn btn-primary btn-md ingresa-button"
-        (click)="login()"
-      >
-        Ingresar
-      </button>
-
-      <button
-        type="button"
-        class="btn btn-outline-secondary google-btn"
-        (click)="loginGoogle()"
-      >
-        <div>
-          <img
-            width="16"
-            alt='Google "G" Logo'
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+<div class="full-screen-container">
+  <div
+    class="mb-3 login-container"
+    style="
+      background-image: url('../../../../assets/img/login-backg.jpg');
+      background-size: cover;
+    "
+  >
+    <div class="ingresa-container">
+      <h1>Ingresa</h1>
+      <p>para seguir disfrutando el contenido.</p>
+      <div class="login-form-container">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            [(ngModel)]="email"
           />
-          Usar Google
         </div>
-      </button>
-    </div>
 
-    <div
-      class="alert alert-danger"
-      role="alert"
-      *ngIf="errorMessage"
-      [innerHtml]="errorMessage"
-    ></div>
-  </div>
-  <div class="no-cuenta-container">
+        <div class="mb-3">
+          <label for="inputPassword5" class="form-label">Password</label>
+          <input
+            type="password"
+            id="inputPassword5"
+            class="form-control"
+            aria-labelledby="passwordHelpBlock"
+            [(ngModel)]="password"
+          />
+        </div>
+      </div>
+      <div class="botones-container">
+        <button
+          type="button"
+          class="btn btn-primary btn-md ingresa-button"
+          (click)="login()"
+        >
+          Ingresar
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-outline-secondary google-btn"
+          (click)="loginGoogle()"
+        >
+          <div>
+            <img
+              width="16"
+              alt='Google "G" Logo'
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+            />
+            Usar Google
+          </div>
+        </button>
+      </div>
+      <p class="no-cuenta">
+        ¿No tienes cuenta?<span
+          ><button
+            type="button"
+            class="btn btn-link"
+            routerLink="/signup"
+            [queryParams]="{ returnUrl: returnUrl }"
+          >
+            Crea una cuenta gratis
+          </button></span
+        >
+      </p>
+
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="errorMessage"
+        [innerHtml]="errorMessage"
+      ></div>
+    </div>
+    <!--<div class="no-cuenta-container">
     <img src="assets/img/brain-tree.png" />
     <h4>¿No tienes cuenta?</h4>
     <span style="text-align: center; display: flex; flex-direction: column"
@@ -70,5 +90,6 @@
         </button></span
       ><span>y disfruta del contenido exclusivo.</span></span
     >
+  </div>-->
   </div>
 </div>

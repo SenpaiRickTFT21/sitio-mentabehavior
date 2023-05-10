@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { User } from 'firebase/auth';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-nav',
@@ -12,15 +13,26 @@ export class TopNavComponent implements OnInit {
   loggedIn = false;
   userEmail: string | undefined;
   isCollapsed: boolean = true;
+  currentRoute: string | null = null;
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.currentRoute = event.urlAfterRedirects;
+        console.log(this.currentRoute);
+      });
+
     this.userService.auth.onAuthStateChanged((user: User | null) => {
       if (user) {
         this.loggedIn = true;
         this.userEmail = user.email;
-        //console.log(this.userEmail);
       } else {
         this.loggedIn = false;
         this.userEmail = undefined;
