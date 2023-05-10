@@ -28,12 +28,12 @@
       #resultadoAdulto
       class="resultado-nino-container"
     >
-      <p>Gracias por tomarte el tiempo para completar el test.</p>
-      <div class="resultado title">
-        <h1>
-          Tu de tener TDAH es:
-          <br /><span class="titulo">{{ titulo }}</span>
-        </h1>
+      <div @fadeIn class="resultado-title-container">
+        <p>Gracias por tomarte el tiempo para completar el test.</p>
+        <div class="resultado-title">
+          <h4>Tu probabilidad de tener TDAH es:</h4>
+          <h1 class="titulo">{{ titulo }}</h1>
+        </div>
       </div>
       <div class="grid">
         <div class="g-col-2"></div>
