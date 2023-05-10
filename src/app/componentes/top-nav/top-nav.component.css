@@ -46,7 +46,6 @@ nav a {
   background-color: #000142 !important;
 }
 .navbar-collapse.collapsed {
-  background-color: #000142; /* Set the background color */
   padding: 1rem; /* Add padding */
 }
 

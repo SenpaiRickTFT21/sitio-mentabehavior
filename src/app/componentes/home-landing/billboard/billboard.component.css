@@ -94,6 +94,9 @@ section {
   width: 60px;
   border-radius: 50%;
 }
+.test-img-container img:hover {
+  cursor: pointer;
+}
 .test-tipo-container {
   display: flex;
   flex-direction: row;

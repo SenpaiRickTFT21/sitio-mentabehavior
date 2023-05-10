@@ -48,7 +48,10 @@
           <div>
             <div class="test-tipo-container">
               <div class="test-img-container">
-                <img src="./assets/img/joven-patineta.jpeg" />
+                <img
+                  (click)="navigateToTest('adulto')"
+                  src="./assets/img/joven-patineta.jpeg"
+                />
               </div>
               <div>
                 <button
@@ -63,7 +66,10 @@
             </div>
             <div class="test-tipo-container">
               <div class="test-img-container">
-                <img src="./assets/img/nino-risa.jpg" />
+                <img
+                  (click)="navigateToTest('nino')"
+                  src="./assets/img/nino-risa.jpg"
+                />
               </div>
               <div>
                 <button
