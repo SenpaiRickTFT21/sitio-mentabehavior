@@ -2,9 +2,6 @@ h4 {
   font-size: 1.25rem;
   font-weight: 300;
 }
-.titulo {
-  padding-top: 1rem;
-}
 
 .resultado-title {
   max-width: 50%;
@@ -13,6 +10,9 @@ h4 {
   padding: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
 .resultado-title-container {

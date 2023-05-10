@@ -21,7 +21,7 @@ export class ResultadoComponent implements OnInit {
     {
       title: 'Baja',
       descripcion:
-        'Gracias por tomarse el tiempo para completar el test en nombre de su hijo. Los resultados indican una probabilidad baja de TDAH. Aun así, si siguen preocupados, les recomendamos que consulten con un profesional de la salud calificado para una evaluación más exhaustiva. Los invitamos a ir a la sección contactos.',
+        'Los resultados indican una probabilidad baja de TDAH. Aun así, si siguen preocupados, les recomendamos que consulten con un profesional de la salud calificado para una evaluación más exhaustiva. Los invitamos a ir a la sección contactos.',
     },
     {
       title: 'Moderada',
