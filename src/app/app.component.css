@@ -1,8 +1,6 @@
 main {
   padding-bottom: 10rem;
   min-height: 100%;
-  /* Equal to height of footer */
-  /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -10rem;
 }
 
@@ -22,7 +20,7 @@ header {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 10rem;
+  /*height: 10rem;*/
 }
 
 .nav {
