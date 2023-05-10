@@ -21,12 +21,9 @@ export class ArticuloContentComponent implements OnInit {
     this.articulo = await this.articuloService.getArticulo(
       this.route.snapshot.paramMap.get('id')
     );
-    if (this.articulo) {
-      console.log(this.articulo);
-    } else {
+    if (!this.articulo) {
       console.error('Articulo not found');
     }
-
     if (this.articulo) {
       this.imagenPortada = this.articulo.imagenes.find(
         (img) => img.imgPortada

@@ -20,11 +20,18 @@ export class LoginComponent implements OnInit {
     private userService: UserService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    this.route.queryParams.subscribe((params) => {
+      this.returnUrl = params.returnUrl || '/';
+    });
+  }
 
   ngOnInit(): void {
     this.returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
     console.log(this.returnUrl);
+    this.route.queryParams.subscribe((params) => {
+      this.returnUrl = params.returnUrl || '/';
+    });
   }
 
   async login() {
@@ -33,23 +40,18 @@ export class LoginComponent implements OnInit {
         email: this.email,
         password: this.password,
       });
-      console.log(response); // Log the response object to the console
-      // Login successful
-      //this.router.navigate(['/']); // Redirect to the home page
+      console.log(response);
       this.router.navigateByUrl(this.returnUrl);
     } catch (error) {
       this.errorMessage = error;
       console.log(this.errorMessage);
-      // Login failed, handle the error
     }
   }
   loginGoogle() {
     this.userService
       .loginconGoogle()
       .then((response) => {
-        //console.log('User registered successfully!', response);
-        this.errorMessage = null; // clear error message
-        //this.router.navigate(['/']); // navigate to home route
+        this.errorMessage = null;
         this.router.navigateByUrl(this.returnUrl);
       })
       .catch((error) => {
