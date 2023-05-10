@@ -24,6 +24,7 @@ export class CrearArticuloComponent {
   titulo = '';
   contenido = '';
   descripcion = '';
+  seccion = '';
   tags = '';
   documentos = [];
   imagenes = [];
@@ -47,6 +48,7 @@ export class CrearArticuloComponent {
       !this.titulo ||
       !this.contenido ||
       !this.descripcion ||
+      !this.seccion ||
       !this.tags
     ) {
       console.log('All fields are required');
@@ -58,6 +60,7 @@ export class CrearArticuloComponent {
       titulo: this.titulo,
       contenido: this.sanitizeContenido(this.contenido),
       descripcion: this.descripcion,
+      seccion: this.seccion,
       tags: this.tags.split(','),
       fechaCreacion: new Date(),
       documentos: this.documentosSeleccionados,
@@ -225,7 +228,7 @@ export class CrearArticuloComponent {
           const image: Imagenes = {
             imgUrl: downloadURL,
             nombreImg: fileName,
-            imgPortada:true,
+            imgPortada: true,
           };
           this.imagenes.push(image);
           console.log(this.imagenes);

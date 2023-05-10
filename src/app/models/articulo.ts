@@ -6,6 +6,7 @@ export interface Articulo {
   documentos: Documentos[];
   fechaCreacion: Date;
   imagenes: Imagenes[];
+  seccion: string;
   tags: string[];
   titulo: string;
 }

@@ -8,7 +8,7 @@ main {
   background: #ffff;
   padding: 0 5rem;
   min-height: 100%;
-  padding-top: 8rem;
+  padding-top: 7rem;
 }
 
 .push {
@@ -29,7 +29,6 @@ header {
 }
 
 .nav-background {
-  background-color: #000142;
 }
 
 a {

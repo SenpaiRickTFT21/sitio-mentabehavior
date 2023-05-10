@@ -89,13 +89,17 @@
 .articulos-lista-container {
   flex-basis: 30%;
 }
+.icon-rotate {
+  transform: rotate(-180deg);
+}
 .lista-titulo {
-  padding: 0.65rem 1rem;
+  padding: 0.65rem 2.5rem;
   margin: 0;
   color: #ffff;
   margin-top: -5.25rem;
   margin-bottom: 1rem;
   text-align: right;
+  font-size: 1.15rem;
 }
 
 .lista-titulo p {
@@ -104,7 +108,7 @@
 }
 
 .lista-titulo-tdah {
-  background-color: #3c0464;
+  background-color: #460476;
 }
 
 .buttton-collapse-container {

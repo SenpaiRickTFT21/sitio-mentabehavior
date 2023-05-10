@@ -1,3 +1,11 @@
+.full-screen-container {
+  height: 100vh; /* 100% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 h1 {
   margin-bottom: 3rem;
   font-size: 2rem;
@@ -7,19 +15,38 @@ h1 {
   gap: 2rem;
   justify-content: space-between;
   margin: -1.5rem -5rem -5rem -5rem;
-  height: 100%;
+  height: 105vh;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: #f1f1f1;
 }
 .ingresa-container {
   display: flex;
-  padding: 2rem 8rem;
+  margin: 2rem 8rem;
   flex-grow: 1;
   justify-content: center;
   flex-direction: column;
-  flex-basis: 50%;
+  box-shadow: 2px -1px 36px 13px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px -1px 36px 13px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px -1px 36px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  height: 60%;
+  padding: 5rem;
+  max-width: 35rem;
+  background-color: #ffff;
 }
 
+.ingresa-container h1 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.no-cuenta {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
 .no-cuenta-container {
   flex-grow: 2;
   font-size: 1.1rem;
@@ -81,6 +108,12 @@ h1 {
   }
   .botones-container {
     flex-wrap: wrap;
+    margin: 1rem 0;
+    height: auto;
+  }
+  .ingresa-container {
+    flex-grow: 0.05;
+    margin: 1rem;
   }
 }
 @media (max-width: 1640px) {
