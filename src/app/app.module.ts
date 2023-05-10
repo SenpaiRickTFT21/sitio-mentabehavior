@@ -18,6 +18,7 @@ import { TopNavModule } from './componentes/top-nav/top-nav.module';
 import { HomeLandingModule } from './componentes/home-landing/home-landing.module';
 import { ArticuloModule } from './componentes/articulo/articulo.module';
 import { TestsModule } from './componentes/tests/tests.module';
+import { SeccionesModule } from './componentes/secciones/secciones.module';
 import { AutenticacionModule } from './componentes/autenticacion/autenticacion.module';
 import { ArticuloComponent } from './componentes/articulo/articulo.component';
 import { FooterComponent } from './componentes/footer/footer.component';
@@ -26,6 +27,7 @@ import { CrearArticuloComponent } from './componentes/crear-articulo/crear-artic
 import { RegistrarUserComponent } from './componentes/autenticacion/registrar-user/registrar-user.component';
 import { LoginComponent } from './componentes/autenticacion/login/login.component';
 import { TestsComponent } from './componentes/tests/tests.component';
+import { SeccionesComponent } from './componentes/secciones/secciones.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeLandingComponent },
@@ -46,6 +48,11 @@ const appRoutes: Routes = [
     component: TestsComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'secciones/:id',
+    component: SeccionesComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
@@ -61,6 +68,7 @@ const appRoutes: Routes = [
     TestsModule,
     AutenticacionModule,
     BrowserAnimationsModule,
+    SeccionesModule,
     RouterModule.forRoot(appRoutes),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),

@@ -1,0 +1,66 @@
+<ng-container *ngIf="id === 'tdah'">
+  <div class="secciones-main-container">
+    <div class="secciones-header">
+      <div class="title-container" [class.tdha-title-container]="id === 'tdah'">
+        <h1>{{ contenidoTDAH.titulo }}</h1>
+      </div>
+      <div class="secciones-image-header-container">
+        <div class="comunidad-title-container">
+          <h4>{{ contenidoTDAH.subtitulo }}</h4>
+          <h2>¿Qué debo saber sobre esta comunidad?</h2>
+        </div>
+      </div>
+    </div>
+    <div class="foro-container">
+      <div class="foro-descripcion-container">
+        <div
+          class="foro-img"
+          [ngStyle]="{
+            'background-image': 'url(' + contenidoTDAH.foroImg + ')'
+          }"
+        ></div>
+        <div class="foro-descripcion">
+          <h4 class="foro-titulo">{{ contenidoTDAH.descripcionTitulo }}</h4>
+          <p>{{ contenidoTDAH.descripcion }}</p>
+          <div class="foro-btn-container">
+            <button type="button" class="btn btn-primary tdah-foro-btn">
+              Ir al foro
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="articulos-lista-container">
+        <div class="lista-titulo lista-titulo-tdah"><p>Preguntas</p></div>
+        <div>
+          <p
+            class="d-md-flex justify-content-md-end buttton-collapse-container"
+          >
+            <button
+              type="button"
+              class="btn btn-link"
+              (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1"
+              aria-controls="collapseExample1"
+            >
+              Comunicación
+            </button>
+          </p>
+          <div style="min-height: 1px">
+            <div
+              #collapse1="ngbCollapse"
+              [(ngbCollapse)]="isCollapsed1"
+              [horizontal]="true"
+              style="max-width: 100%"
+            >
+              <div class="" style="width: 100%">
+                <div class="card-body">
+                  You can collapse horizontally this card by clicking Toggle
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
