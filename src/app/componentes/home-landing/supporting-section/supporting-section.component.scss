@@ -52,6 +52,9 @@ button {
 }
 
 @media (max-width: 767.98px) {
+  h2{
+    font-size: 2rem !important;
+  }
   .supporting-section-container > * {
     flex: auto;
   }
@@ -72,5 +75,8 @@ button {
   .img-container img {
     padding: 0 0.5rem;
     width: 90%;
+  }
+  h2{
+    font-size: 1.25rem !important;
   }
 }
