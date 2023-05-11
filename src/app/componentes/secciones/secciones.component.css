@@ -120,10 +120,16 @@
   font-size: 1.3rem;
 }
 
+.lista-item {
+  margin-bottom: 0.75rem;
+}
+
 .lista-titulo-tdah {
   background-color: #460476;
 }
-
+.contenido-item-title {
+  color: rgb(66, 70, 72);
+}
 .buttton-collapse-container {
   border-bottom: 1px solid rgb(220, 229, 233);
 }

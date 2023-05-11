@@ -5,6 +5,8 @@ import {
   addDoc,
   getDocs,
   setDoc,
+  query,
+  where,
 } from '@angular/fire/firestore';
 import { Articulo } from '../models/articulo';
 import { deleteDoc, doc, getDoc } from 'firebase/firestore';
@@ -34,7 +36,20 @@ export class ArticuloService {
       articulo.id = doc.id;
       articulos.push(articulo);
     });
-    return articulos; 
+    return articulos;
+  }
+
+  async getArticulosBySeccion(seccion: string): Promise<Articulo[]> {
+    const articulosRef = collection(this.firestore, 'articulos');
+    const q = query(articulosRef, where('seccion', '==', seccion));
+    const querySnapshot = await getDocs(q);
+    const articulos: Articulo[] = [];
+    querySnapshot.forEach((doc) => {
+      const articulo = doc.data() as Articulo;
+      articulo.id = doc.id;
+      articulos.push(articulo);
+    });
+    return articulos;
   }
 
   async getArticulo(id: string): Promise<Articulo | null> {
@@ -53,8 +68,6 @@ export class ArticuloService {
       return null;
     }
   }
-  
-  
 
   async editArticulo(articulo: Articulo): Promise<void> {
     const articuloRef = collection(this.firestore, 'articulos');

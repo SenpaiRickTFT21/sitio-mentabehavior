@@ -19,21 +19,16 @@ nav a {
 }
 
 .navbar-brand {
-  /*background: linear-gradient(-45deg, #048fa1, #09aec4);*/
   padding: 1.5rem 1rem 1rem 1rem;
   margin-top: -3rem;
   margin-bottom: -2.5rem;
   margin-left: 1rem;
-  border-radius: 0 0 6px 6px;
-  /*box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);*/
 }
 .navbar-brand-noshadow {
   box-shadow: none;
 }
 .navbar-brand img {
-  height: 3.75rem;
+  height: 3.25rem;
 }
 
 .nav-item {
@@ -52,7 +47,6 @@ nav a {
   margin-bottom: 0.5rem;
 }
 .login-link {
-  background-color: #000142;
   border: 2px solid #f57730;
   box-sizing: border-box;
 }

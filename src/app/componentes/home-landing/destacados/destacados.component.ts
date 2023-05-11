@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticuloService } from '../../../services/articulo.service';
-import { Articulo } from '../../../models/articulo';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,23 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./destacados.component.css', '../home-landing.component.css'],
 })
 export class DestacadosComponent implements OnInit {
-  articulos: Articulo[] = [];
+  constructor(private router: Router) {}
 
-  constructor(
-    private articuloService: ArticuloService,
-    private router: Router
-  ) {}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    this.getArticulos();
-  }
-
-  async getArticulos(): Promise<void> {
-    this.articulos = await this.articuloService.getArticulos();
-  }
-
-  navigateToArticle(article) {
-    //console.log('Selected article:', article);
-    this.router.navigate(['/articulo', article]);
+  navigateToSeccion(id: string) {
+    //console.log('Selected id:string:', article);
+    this.router.navigate(['/secciones', id]);
   }
 }

@@ -14,8 +14,8 @@ h1 {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  margin: -1.5rem -5rem -5rem -5rem;
-  height: 105vh;
+  margin: 0;
+  height: 100vh;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
@@ -41,6 +41,13 @@ h1 {
 .ingresa-container h1 {
   font-weight: 500;
   margin-bottom: 1rem;
+}
+.ingresa-button {
+  background-color: #f57730;
+  border: none;
+}
+.ingresa-button:hover {
+  filter: brightness(1.2);
 }
 .no-cuenta {
   font-size: 1rem;

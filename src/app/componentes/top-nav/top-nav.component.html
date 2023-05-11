@@ -4,13 +4,13 @@
   [class.collapsed-background]="!isCollapsed"
   [class.nav-bckg-color]="currentRoute != '/'"
   [class.nav-bckg-transparent]="
-    currentRoute.includes('articulo') || currentRoute === '/login'
+    currentRoute.includes('articulo') || currentRoute.includes('login')
   "
 >
   <div class="container-fluid">
     <a
       class="navbar-brand"
-      [class.navbar-brand-noshadow]="currentRoute === '/login'"
+      [class.navbar-brand-noshadow]="currentRoute.includes('login')"
       href=""
     >
       <img
@@ -33,7 +33,7 @@
       id="navbarNav2"
       [class.show]="!isCollapsed"
       [class.collapsed]="!isCollapsed"
-      [class.hide]="currentRoute === '/login'"
+      [class.hide]="currentRoute.includes('login')"
     >
       <ul class="navbar-nav">
         <li class="nav-item">
