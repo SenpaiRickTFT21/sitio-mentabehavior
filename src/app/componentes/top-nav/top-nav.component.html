@@ -2,7 +2,7 @@
   class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-md"
   data-bs-theme="dark"
   [class.collapsed-background]="!isCollapsed"
-  [class.nav-bckg-color]="currentRoute != '/'"
+  [class.nav-bckg-color]="currentRoute != '/' || ''"
   [class.nav-bckg-transparent]="
     currentRoute.includes('articulo') || currentRoute.includes('login')
   "
@@ -94,6 +94,29 @@
                   style="max-width: 100%"
                 >
                   <div class="profile-collapse" style="width: 100%">
+                    <div
+                      style="
+                        width: 100%;
+                        margin: -3rem -1rem 0 auto;
+                        text-align: right;
+                        cursor: pointer;
+                      "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#97a5af"
+                        class="bi bi-x-lg"
+                        viewBox="0 0 16 16"
+                        style="background-color: transparent"
+                        (click)="collapse1.toggle()"
+                      >
+                        <path
+                          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                        />
+                      </svg>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#1bb1c6"

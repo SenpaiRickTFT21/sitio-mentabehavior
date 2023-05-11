@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,12 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./destacados.component.css', '../home-landing.component.css'],
 })
 export class DestacadosComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
   navigateToSeccion(id: string) {
     //console.log('Selected id:string:', article);
+
+    this.renderer.setProperty(window, 'scrollTo', {
+      top: 0,
+      behavior: 'smooth',
+    });
+
     this.router.navigate(['/secciones', id]);
   }
 }

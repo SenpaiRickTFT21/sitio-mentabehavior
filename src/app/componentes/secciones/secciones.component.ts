@@ -21,7 +21,7 @@ export class SeccionesComponent implements OnInit {
     descripcionTitulo: '"Voces del TDA-H: Compartiendo Experiencias y Apoyo"',
     descripcion:
       'Queremos brindar un espacio seguro y amigable donde las personas afectadas por el TDA-H, ya sean pacientes, familiares o profesionales, puedan compartir sus historias, conocimientos y consejos. Este foro es una oportunidad para',
-    foroImg: '"../../../assets/img/foro-tdah-img.jpeg"',
+    foroImg: '"./assets/img/foro-tdah-img.jpeg"',
   };
 
   constructor(
@@ -35,7 +35,6 @@ export class SeccionesComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       this.id = params.get('id');
     });
-    //this.getArticulos();
     this.getArticulosBySeccion();
   }
 
@@ -57,26 +56,6 @@ export class SeccionesComponent implements OnInit {
     console.log(this.isCollapsed);
   }
 
-  /*async getArticulos(): Promise<void> {
-    const articulos = await this.articuloService.getArticulos();
-    console.log(articulos);
-    const seccion = 'tdah';
-    this.articulosTDAH = await this.articuloService.getArticulosBySeccion(
-      seccion
-    );
-    //this.articulosTDAH = articulos.filter(
-    //   (articulo) => articulo.seccion === 'tdah'
-    //);
-    console.log(this.articulosTDAH);
-
-    for (const articulo of this.articulosTDAH) {
-      for (const tag of articulo.tags) {
-        this.isCollapsed[tag] = true;
-      }
-    }
-    console.log(this.isCollapsed);
-  }*/
-
   getUniqueTags(): string[] {
     const uniqueTags = new Set<string>();
     for (const articulo of this.articulosTDAH) {
@@ -96,7 +75,7 @@ export class SeccionesComponent implements OnInit {
   }
   navigateToArticle(id: string) {
     //console.log('Selected article:', article);
-    this.router.navigate(['/articulo', id]);
     this.renderer.setProperty(window, 'scrollTo', 0);
+    this.router.navigate(['/articulo', id]);
   }
 }

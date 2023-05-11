@@ -95,8 +95,11 @@ nav a {
   width: auto;
   position: absolute;
   z-index: 1000;
-  right: 0.5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
   margin-top: 0.5rem;
+  max-width: 350px;
 }
 .profile-collapse {
   background-color: #fff;
@@ -159,6 +162,11 @@ nav a {
   #navbarNav2 {
     flex-direction: column !important;
     align-items: flex-end;
+  }
+  .profile-container {
+    left: 10%;
+    right: 10%;
+    top: 20%;
   }
 }
 
