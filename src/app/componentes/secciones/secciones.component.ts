@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ArticuloService } from '../../services/articulo.service';
+import { Articulo } from '../../models/articulo';
 
 @Component({
   selector: 'app-secciones',
@@ -10,6 +12,8 @@ export class SeccionesComponent implements OnInit {
   id: string;
   isCollapsed1 = true;
   isCollapsed2 = true;
+  articulos: Articulo[] = [];
+
   contenidoTDAH = {
     titulo: 'TDAH',
     subtitulo: 'Explorando la mente: enfoques clínicos',
@@ -19,11 +23,19 @@ export class SeccionesComponent implements OnInit {
     foroImg: '"../../../assets/img/foro-tdah-img.jpeg"',
   };
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private articuloService: ArticuloService
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.id = params.get('id');
     });
+    this.getArticulos();
+  }
+  async getArticulos(): Promise<void> {
+    this.articulos = await this.articuloService.getArticulos();
+    console.log(this.articulos);
   }
 }

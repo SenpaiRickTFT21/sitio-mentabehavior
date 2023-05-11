@@ -1,9 +1,9 @@
 .destacados-container {
-  background: rgb(77, 95, 122);
+  background: rgb(93, 112, 141);
   background: linear-gradient(
     135deg,
-    rgba(77, 95, 122) 0%,
-    rgb(51, 67, 90) 55%,
+    rgb(124, 142, 168) 0%,
+    rgb(85, 107, 140) 55%,
     rgba(48, 63, 85, 1) 100%
   );
   width: 100%;

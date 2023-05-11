@@ -13,70 +13,26 @@
     </div>
     <div class="foro-container">
       <div class="foro-descripcion-container">
-        <div
-          class="foro-img"
-          [ngStyle]="{
-            'background-image': 'url(' + contenidoTDAH.foroImg + ')'
-          }"
-        ></div>
+        <h4 class="foro-titulo">{{ contenidoTDAH.descripcionTitulo }}</h4>
         <div class="foro-descripcion">
-          <h4 class="foro-titulo">{{ contenidoTDAH.descripcionTitulo }}</h4>
-          <p>{{ contenidoTDAH.descripcion }}</p>
-          <div class="foro-btn-container">
-            <button
-              type="button"
-              class="btn btn-primary foro-btn tdah-foro-btn"
-            >
-              Ir al foro
-            </button>
+          <div
+            class="foro-img"
+            [ngStyle]="{
+              'background-image': 'url(' + contenidoTDAH.foroImg + ')'
+            }"
+          ></div>
+          <div class="foro-descripcion-p-container">
+            <p>{{ contenidoTDAH.descripcion }}</p>
           </div>
+        </div>
+        <div class="foro-btn-container">
+          <button type="button" class="btn btn-primary foro-btn tdah-foro-btn">
+            Ir al foro
+          </button>
         </div>
       </div>
       <div id="listaArticulos" class="articulos-lista-container">
         <div class="lista-titulo lista-titulo-tdah"><p>Contenido</p></div>
-        <div>
-          <p
-            class="d-md-flex justify-content-md-end buttton-collapse-container"
-          >
-            <button
-              type="button"
-              class="btn btn-link"
-              (click)="collapse1.toggle()"
-              [attr.aria-expanded]="!isCollapsed1"
-              aria-controls="collapseExample1"
-            >
-              Comunicación
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                [class.icon-rotate]="!isCollapsed1"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </button>
-          </p>
-          <div style="min-height: 1px">
-            <div
-              #collapse1="ngbCollapse"
-              [(ngbCollapse)]="isCollapsed1"
-              [horizontal]="true"
-              style="max-width: 100%"
-            >
-              <div class="" style="width: 100%">
-                <div class="card-body">Articulo 1</div>
-                <div class="card-body">Articulo 2</div>
-                <div class="card-body">Articulo 3</div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div>
           <p
             class="d-md-flex justify-content-md-end buttton-collapse-container"

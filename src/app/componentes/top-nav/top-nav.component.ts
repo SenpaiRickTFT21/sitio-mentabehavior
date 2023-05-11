@@ -14,7 +14,7 @@ export class TopNavComponent implements OnInit {
   userEmail: string | undefined;
   isCollapsed: boolean = true;
   currentRoute: string | null = null;
-  isCollapsed1 = true;
+  isCollapsedProfile = true;
 
   constructor(
     private userService: UserService,
