@@ -14,19 +14,21 @@ export class TopNavComponent implements OnInit {
   userEmail: string | undefined;
   isCollapsed: boolean = true;
   currentRoute: string | null = null;
-  isCollapsed1 = true;
+  isCollapsedProfile = true;
 
   constructor(
     private userService: UserService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) {
+    this.currentRoute = '/';
+  }
 
   ngOnInit(): void {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
-        this.currentRoute = event.urlAfterRedirects;
+        this.currentRoute = event.urlAfterRedirects || '/';
         console.log(this.currentRoute);
       });
 
@@ -43,6 +45,7 @@ export class TopNavComponent implements OnInit {
 
   async logout() {
     await this.userService.auth.signOut();
+    this.isCollapsedProfile = true;
     this.router.navigate(['/']);
   }
 }

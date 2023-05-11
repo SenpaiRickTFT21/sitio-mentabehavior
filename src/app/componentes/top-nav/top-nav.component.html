@@ -2,15 +2,15 @@
   class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-md"
   data-bs-theme="dark"
   [class.collapsed-background]="!isCollapsed"
-  [class.nav-bckg-color]="currentRoute != '/'"
+  [class.nav-bckg-color]="currentRoute != '/' || ''"
   [class.nav-bckg-transparent]="
-    currentRoute.includes('articulo') || currentRoute === '/login'
+    currentRoute.includes('articulo') || currentRoute.includes('login')
   "
 >
   <div class="container-fluid">
     <a
       class="navbar-brand"
-      [class.navbar-brand-noshadow]="currentRoute === '/login'"
+      [class.navbar-brand-noshadow]="currentRoute.includes('login')"
       href=""
     >
       <img
@@ -33,7 +33,7 @@
       id="navbarNav2"
       [class.show]="!isCollapsed"
       [class.collapsed]="!isCollapsed"
-      [class.hide]="currentRoute === '/login'"
+      [class.hide]="currentRoute.includes('login')"
     >
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -67,14 +67,14 @@
                   type="button"
                   class="profile-btn"
                   (click)="collapse1.toggle()"
-                  [attr.aria-expanded]="!isCollapsed1"
+                  [attr.aria-expanded]="!isCollapsedProfile"
                   aria-controls="collapseExample1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="38"
                     height="38"
-                    fill="#f57730"
+                    fill="#1bb1c6"
                     class="bi bi-person-circle"
                     viewBox="0 0 16 16"
                   >
@@ -86,29 +86,52 @@
                   </svg>
                 </button>
               </div>
-              <div
-                style="
-                  min-height: 1px;
-                  width: auto;
-                  position: absolute;
-                  z-index: 1000;
-                  text-align: left;
-                  right: 5rem;
-                  margin-top: 0.5rem;
-                "
-              >
+              <div class="profile-container">
                 <div
                   #collapse1="ngbCollapse"
-                  [(ngbCollapse)]="isCollapsed1"
+                  [(ngbCollapse)]="isCollapsedProfile"
                   [horizontal]="true"
                   style="max-width: 100%"
                 >
                   <div class="profile-collapse" style="width: 100%">
-                    <p>
-                      Hola,
-                      {{ userEmail?.split("@")[0] }}!
-                    </p>
-                    <button class="btn btn-link logout-btn" (click)="logout()">
+                    <div
+                      style="
+                        width: 100%;
+                        margin: -3rem -1rem 0 auto;
+                        text-align: right;
+                        cursor: pointer;
+                      "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#97a5af"
+                        class="bi bi-x-lg"
+                        viewBox="0 0 16 16"
+                        style="background-color: transparent"
+                        (click)="collapse1.toggle()"
+                      >
+                        <path
+                          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                        />
+                      </svg>
+                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#1bb1c6"
+                      class="bi bi-person-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                      />
+                    </svg>
+                    <p class="profile-name">Ricardo Ramos</p>
+                    <p>{{ userEmail }}</p>
+                    <button class="btn logout-btn" (click)="logout()">
                       Salir
                     </button>
                   </div>

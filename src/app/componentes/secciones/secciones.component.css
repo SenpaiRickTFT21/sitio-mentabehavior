@@ -65,23 +65,24 @@
   flex-basis: 70%;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 2rem;
 }
-.foro-img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  flex-basis: 40%;
-}
-.foro-titulo {
-  padding-bottom: 1rem;
-}
+
 .foro-descripcion {
-  flex-basis: 60%;
-  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.foro-descripcion-p-container {
+  flex-basis: 65%;
+}
+.foro-btn-container {
+  flex-grow: 1;
+  text-align: center;
 }
 .foro-btn {
   border: none;
-  width: 200px;
+  width: 210px;
   padding: 0.75rem;
 }
 .foro-btn:hover {
@@ -90,6 +91,13 @@
 .tdah-foro-btn {
   background-color: rgb(102, 11, 159);
 }
+.foro-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-basis: 35%;
+}
+
 .articulos-lista-container {
   flex-basis: 30%;
 }
@@ -97,24 +105,31 @@
   transform: rotate(-180deg);
 }
 .lista-titulo {
-  padding: 0.65rem 2.5rem;
+  padding: 0.45rem 1.75rem;
   margin: 0;
   color: #ffff;
   margin-top: -5.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: right;
   font-size: 1.15rem;
 }
 
 .lista-titulo p {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.lista-item {
+  margin-bottom: 0.75rem;
 }
 
 .lista-titulo-tdah {
   background-color: #460476;
 }
-
+.contenido-item-title {
+  color: rgb(66, 70, 72);
+}
 .buttton-collapse-container {
   border-bottom: 1px solid rgb(220, 229, 233);
 }
@@ -123,9 +138,13 @@
 }
 
 @media (max-width: 991.98px) {
+  .secciones-header {
+    margin: -1rem;
+  }
   .comunidad-title-container {
+    flex-grow: 1;
+    padding: 2rem;
     flex-basis: 100%;
-    padding: 2rem 5rem;
   }
 
   .foro-container,
@@ -134,19 +153,24 @@
 
     height: auto;
   }
+  .foro-descripcion-container {
+    flex-basis: 100%;
+  }
   .foro-img {
     height: 12rem;
-    flex-basis: auto;
+    flex-basis: 50%;
   }
 
   .lista-titulo {
     margin-top: auto;
-  }
-  .foro-btn-container {
     text-align: center;
   }
-
-  .lista-titulo {
-    text-align: center;
+}
+@media (max-width: 600px) {
+  .foro-descripcion {
+    display: block;
+  }
+  .foro-img {
+    margin-bottom: 2rem;
   }
 }
