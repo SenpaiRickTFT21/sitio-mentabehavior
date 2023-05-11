@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ArticleService } from '../../services/article.service';
 
 @Component({
   selector: 'app-articulo',
   templateUrl: './articulo.component.html',
   styleUrls: ['./articulo.component.css'],
-  providers: [ArticleService],
+  providers: [],
 })
 export class ArticuloComponent implements OnInit {
   //articleId: number;

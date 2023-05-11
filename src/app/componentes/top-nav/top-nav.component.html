@@ -1,9 +1,11 @@
 <nav
-  class="navbar navbar-expand-lg navbar-dark bg-transparent"
+  class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-expand-md"
   data-bs-theme="dark"
   [class.collapsed-background]="!isCollapsed"
   [class.nav-bckg-color]="currentRoute != '/'"
-  [class.nav-bckg-transparent]="currentRoute === '/login'"
+  [class.nav-bckg-transparent]="
+    currentRoute.includes('articulo') || currentRoute === '/login'
+  "
 >
   <div class="container-fluid">
     <a
@@ -49,14 +51,70 @@
       </ul>
       <ul class="navbar-nav" style="align-self: flex-end">
         <li *ngIf="loggedIn" class="nav-item">
-          <div class="bienvenida">
-            <p>
+          <div class="">
+            <!--<p>
               Hola,
               {{ userEmail?.split("@")[0] }}!
             </p>
             <button class="btn btn-link logout-btn" (click)="logout()">
               Salir
-            </button>
+            </button>-->
+            <div>
+              <div
+                class="d-md-flex justify-content-md-end buttton-collapse-container"
+              >
+                <button
+                  type="button"
+                  class="profile-btn"
+                  (click)="collapse1.toggle()"
+                  [attr.aria-expanded]="!isCollapsed1"
+                  aria-controls="collapseExample1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="38"
+                    fill="#f57730"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                style="
+                  min-height: 1px;
+                  width: auto;
+                  position: absolute;
+                  z-index: 1000;
+                  text-align: left;
+                  right: 5rem;
+                  margin-top: 0.5rem;
+                "
+              >
+                <div
+                  #collapse1="ngbCollapse"
+                  [(ngbCollapse)]="isCollapsed1"
+                  [horizontal]="true"
+                  style="max-width: 100%"
+                >
+                  <div class="profile-collapse" style="width: 100%">
+                    <p>
+                      Hola,
+                      {{ userEmail?.split("@")[0] }}!
+                    </p>
+                    <button class="btn btn-link logout-btn" (click)="logout()">
+                      Salir
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li *ngIf="!loggedIn" class="nav-item">

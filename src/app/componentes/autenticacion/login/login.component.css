@@ -24,7 +24,7 @@ h1 {
 }
 .ingresa-container {
   display: flex;
-  margin: 2rem 8rem;
+  margin: auto;
   flex-grow: 1;
   justify-content: center;
   flex-direction: column;
@@ -32,7 +32,7 @@ h1 {
   -webkit-box-shadow: 2px -1px 36px 13px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px -1px 36px 13px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  height: 60%;
+  height: auto;
   padding: 5rem;
   max-width: 35rem;
   background-color: #ffff;
@@ -99,6 +99,9 @@ h1 {
 }
 
 @media (max-width: 576px) {
+  .ingresa-container {
+    margin-top: 10rem !important;
+  }
 }
 
 @media (max-width: 991.98px) {
