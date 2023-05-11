@@ -1,14 +1,8 @@
-main {
-  padding-bottom: 10rem;
-  min-height: 100%;
-  margin-bottom: -10rem;
-}
-
 .center-container {
   background: #ffff;
   padding: 0 5rem;
   min-height: 100%;
-  padding-top: 7rem;
+  padding-top: 6.35rem;
 }
 
 .push {
@@ -26,9 +20,6 @@ header {
 .nav {
   align-self: flex-start;
   flex-grow: 1;
-}
-
-.nav-background {
 }
 
 a {
