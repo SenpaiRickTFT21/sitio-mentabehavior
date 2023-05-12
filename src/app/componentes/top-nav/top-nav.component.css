@@ -28,7 +28,7 @@ nav a {
   box-shadow: none;
 }
 .navbar-brand img {
-  height: 3.25rem;
+  height: 3.65rem;
 }
 
 .nav-item {
@@ -149,12 +149,23 @@ nav a {
   color: #ffff;
 }
 .profile-btn {
-  background-color: transparent;
-  border-radius: 50%;
+  background-color: rgba(45, 58, 71, 0.551);
+  border-radius: 15px;
   border: none;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
+.profile-btn:hover {
+  filter: brightness(1.4);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.profile-btn:active,
+.profile-btn:focus {
+  outline: 2px solid #f57830e1;
+}
 @media (max-width: 1200px) {
   nav {
     padding: 1rem 3rem 1rem 1.5rem;

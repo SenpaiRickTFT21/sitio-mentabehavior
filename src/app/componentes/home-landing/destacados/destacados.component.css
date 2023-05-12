@@ -1,11 +1,5 @@
 .destacados-container {
-  background: rgb(93, 112, 141);
-  background: linear-gradient(
-    135deg,
-    rgb(124, 142, 168) 0%,
-    rgb(85, 107, 140) 55%,
-    rgba(48, 63, 85, 1) 100%
-  );
+  background: rgb(57, 68, 85);
   width: 100%;
   padding-top: 4rem;
   color: #ffff;
@@ -18,19 +12,30 @@ h3 {
 h2 {
   font-weight: 400;
   padding-top: 3rem;
+  text-align: left;
 }
 h3 {
   font-weight: 400 !important;
   font-size: 2.1rem;
 }
+.destacados-presentacion-container {
+  display: flex;
+  flex-direction: column;
+}
+.destacados-p {
+  max-width: 50%;
+  margin-top: 2rem;
+  text-align: left;
+}
 
 .secciones {
   padding-top: 5rem;
 }
+
 .secciones-container {
   background-color: transparent;
   height: 22rem;
-  align-self: flex-end;
+  align-self: flex-start;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
@@ -110,6 +115,10 @@ h3 {
 }
 
 @media (max-width: 1199.98px) {
+  .destacados-p {
+    max-width: 100%;
+    padding: 1rem;
+  }
   .secciones-container {
     height: 30rem;
   }
