@@ -11,7 +11,7 @@ export const environment = {
     authDomain: 'tdah-site.firebaseapp.com',
     messagingSenderId: '343197142168',
   },
-  production: false
+  production: false,
 };
 
 /*

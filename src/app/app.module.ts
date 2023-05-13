@@ -20,6 +20,7 @@ import { ArticuloModule } from './componentes/articulo/articulo.module';
 import { TestsModule } from './componentes/tests/tests.module';
 import { SeccionesModule } from './componentes/secciones/secciones.module';
 import { AutenticacionModule } from './componentes/autenticacion/autenticacion.module';
+import { ContactosModule } from './componentes/contactos/contactos.module';
 import { ArticuloComponent } from './componentes/articulo/articulo.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeLandingComponent } from './componentes/home-landing/home-landing.component';
@@ -28,6 +29,7 @@ import { RegistrarUserComponent } from './componentes/autenticacion/registrar-us
 import { LoginComponent } from './componentes/autenticacion/login/login.component';
 import { TestsComponent } from './componentes/tests/tests.component';
 import { SeccionesComponent } from './componentes/secciones/secciones.component';
+import { ContactosComponent } from './componentes/contactos/contactos.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeLandingComponent },
@@ -53,10 +55,20 @@ const appRoutes: Routes = [
     component: SeccionesComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'contactos',
+    component: ContactosComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, CrearArticuloComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    CrearArticuloComponent,
+    ContactosComponent,
+  ],
   imports: [
     NgbModule,
     BrowserModule,
@@ -67,6 +79,7 @@ const appRoutes: Routes = [
     ArticuloModule,
     TestsModule,
     AutenticacionModule,
+    ContactosModule,
     BrowserAnimationsModule,
     SeccionesModule,
     RouterModule.forRoot(appRoutes),
