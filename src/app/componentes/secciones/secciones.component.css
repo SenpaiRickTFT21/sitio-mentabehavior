@@ -164,7 +164,9 @@
 }
 
 @media (max-width: 991.98px) {
-  .lista-titulo-tdah {
+  .lista-titulo-tdah,
+  .lista-titulo-jovenes,
+  .lista-titulo-padres {
     background-color: #ffff;
     color: black;
     margin-bottom: 0;
