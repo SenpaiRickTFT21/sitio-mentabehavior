@@ -51,7 +51,6 @@ export class CrearArticuloComponent {
       !this.seccion ||
       !this.tags
     ) {
-      console.log('All fields are required');
       return;
     }
 
@@ -71,8 +70,6 @@ export class CrearArticuloComponent {
     this.articuloService
       .addArticulo(articulo)
       .then(() => {
-        //console.log('Articulo added successfully');
-        // reset form fields
         this.autor = '';
         this.titulo = '';
         this.contenido = '';

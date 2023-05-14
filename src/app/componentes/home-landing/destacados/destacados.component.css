@@ -121,9 +121,12 @@ h3 {
   }
   .secciones-container {
     height: 30rem;
+    max-width: 80%;
   }
   .secciones {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .secciones-container {
     flex-grow: 1;
@@ -148,5 +151,8 @@ h3 {
   }
   .destacados-container {
     padding: 1rem 1rem 0 1rem;
+  }
+  .secciones-container {
+    max-width: 100%;
   }
 }

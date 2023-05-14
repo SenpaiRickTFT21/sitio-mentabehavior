@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
-    console.log(this.returnUrl);
+
     this.route.queryParams.subscribe((params) => {
       this.returnUrl = params.returnUrl || '/';
     });
@@ -41,12 +41,11 @@ export class LoginComponent implements OnInit {
         email: this.email,
         password: this.password,
       });
-      console.log(response);
+
       this.renderer.setProperty(window, 'scrollTo', 0);
       this.router.navigateByUrl(this.returnUrl);
     } catch (error) {
       this.errorMessage = error;
-      console.log(this.errorMessage);
     }
   }
   loginGoogle() {
@@ -59,7 +58,6 @@ export class LoginComponent implements OnInit {
       })
       .catch((error) => {
         this.errorMessage = error.message;
-        console.error(error);
       });
   }
 }

@@ -18,6 +18,5 @@ export class HomeLandingComponent implements OnInit {
 
   async getArticulos(): Promise<void> {
     this.articulos = await this.articuloService.getArticulos();
-    console.log(this.articulos);
   }
 }

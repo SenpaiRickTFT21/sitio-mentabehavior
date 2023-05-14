@@ -123,12 +123,17 @@ section {
   .button {
     flex-basis: 50%;
   }
+  .background-image {
+    background-position: left;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .buttons {
-    flex-direction: column;
+  .billboard {
+    height: auto;
+    padding: 6rem 0rem 3rem 0rem;
   }
+
   .button {
     max-width: 100%;
   }
@@ -139,7 +144,17 @@ section {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
+  .buttons {
+    flex-direction: column;
+  }
   .button {
     max-width: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+  .billboard {
+    height: 100vh;
+    padding: 1rem 0;
   }
 }

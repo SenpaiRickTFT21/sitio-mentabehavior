@@ -29,7 +29,6 @@ export class SeccionComponent implements OnInit {
       this.articulos = await this.articuloService.getArticulosBySeccion(
         this.articuloID
       );
-      console.log(this.articulos);
     } catch (error) {
       console.error('Error retrieving articulos: ', error);
     }
@@ -39,14 +38,15 @@ export class SeccionComponent implements OnInit {
         this.isCollapsed[tag] = true;
       }
     }
-    console.log(this.isCollapsed);
   }
 
   getUniqueTags(): string[] {
     const uniqueTags = new Set<string>();
-    for (const articulo of this.articulos) {
-      for (const tag of articulo.tags) {
-        uniqueTags.add(tag);
+    if (this.articulos) {
+      for (const articulo of this.articulos) {
+        for (const tag of articulo.tags) {
+          uniqueTags.add(tag);
+        }
       }
     }
     return Array.from(uniqueTags);
@@ -60,7 +60,6 @@ export class SeccionComponent implements OnInit {
     this.isCollapsed[tag] = !this.isCollapsed[tag];
   }
   navigateToArticle(id: string) {
-    //console.log('Selected article:', article);
     this.renderer.setProperty(window, 'scrollTo', 0);
     this.router.navigate(['/articulo', id]);
   }

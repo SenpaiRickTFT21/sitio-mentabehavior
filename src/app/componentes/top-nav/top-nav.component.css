@@ -28,7 +28,7 @@ nav a {
   box-shadow: none;
 }
 .navbar-brand img {
-  height: 3.65rem;
+  height: 3.35rem;
 }
 
 .nav-item {
@@ -114,11 +114,15 @@ nav a {
   align-items: center;
   padding: 4rem 1rem;
 }
-.profile-collapse svg {
-  width: 3.75rem;
+.profile-collapse img {
+  width: 84px;
   margin-bottom: 0.5rem;
   background-color: #cefdfe;
   border-radius: 50%;
+  margin-top: 2rem;
+}
+.close-profile {
+  margin-right: 1rem;
 }
 .profile-collapse p {
   font-weight: 300;
@@ -166,6 +170,21 @@ nav a {
 .profile-btn:focus {
   outline: 2px solid #f57830e1;
 }
+
+.profile-btn img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.navbar-toggler {
+  height: auto;
+  padding: 0.35rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+  width: 20px;
+  fill: #ffff;
+}
 @media (max-width: 1200px) {
   nav {
     padding: 1rem 3rem 1rem 1.5rem;
@@ -183,7 +202,7 @@ nav a {
 
 @media (max-width: 767.98px) {
   nav {
-    padding: 2rem 0.75rem;
+    padding: 1rem 0.75rem;
     margin-top: 0;
   }
 

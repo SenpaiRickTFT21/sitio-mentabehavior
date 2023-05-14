@@ -207,8 +207,6 @@ export class TestAdultoComponent implements OnInit {
 
     this.testSum = (this.testSum || 0) + sum;
     this.questionsSum = (this.questionsSum || 0) + questionsSum;
-    console.log('Sum of question values:', this.testSum);
-    console.log('Sum of questions:', this.questionsSum);
 
     result = (this.testSum / this.questionsSum) * 100;
 
@@ -219,8 +217,6 @@ export class TestAdultoComponent implements OnInit {
     } else {
       this.resultado = 'Alta';
     }
-
-    console.log(this.questionsSum, result, this.resultado);
 
     if (hide === 'inatencion') {
       this.disclaimerShow();

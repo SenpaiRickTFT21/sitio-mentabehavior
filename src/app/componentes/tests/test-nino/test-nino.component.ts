@@ -208,8 +208,6 @@ export class TestNinoComponent implements OnInit {
 
     this.testSum = (this.testSum || 0) + sum; //guardar suma de los valores
     this.questionsSum = (this.questionsSum || 0) + questionsSum; //guardar suma de las preguntas
-    console.log('Sum of question values:', this.testSum);
-    console.log('Sum of questions:', this.questionsSum);
 
     result = (this.testSum / this.questionsSum) * 100; //Arrojar porcentaje
 
@@ -222,7 +220,6 @@ export class TestNinoComponent implements OnInit {
       this.resultado = 'Alta';
     }
 
-    console.log(this.questionsSum, result, this.resultado);
     //Logica para mostrar y ocultar las secciones del test
     if (hide === 'inatencion') {
       this.disclaimerShow();

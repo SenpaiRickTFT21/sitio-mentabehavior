@@ -105,9 +105,12 @@ h1 {
   flex-basis: 50%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1640px) {
+  .login-container {
+    height: auto;
+  }
   .ingresa-container {
-    margin-top: 10rem !important;
+    margin: 2rem;
   }
 }
 
@@ -124,10 +127,16 @@ h1 {
   .ingresa-container {
     flex-grow: 0.05;
     margin: 1rem;
+    padding: 2rem;
   }
 }
-@media (max-width: 1640px) {
+
+@media (max-width: 576px) {
+  p {
+    width: 100%;
+    font-size: 1rem;
+  }
   .ingresa-container {
-    padding: 2rem;
+    margin-top: 5rem !important;
   }
 }

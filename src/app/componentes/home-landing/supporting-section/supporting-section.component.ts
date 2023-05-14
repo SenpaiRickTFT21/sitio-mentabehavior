@@ -27,7 +27,6 @@ export class SupportingSectionComponent implements OnInit {
   }
 
   navigateToArticle(article) {
-    //console.log('Selected article:', article);
     this.renderer.setProperty(window, 'scrollTo', 0);
     this.router.navigate(['/articulo', this.articuloID]);
   }
