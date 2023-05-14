@@ -139,3 +139,14 @@ h3 {
     font-size: 2rem !important;
   }
 }
+
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 1.5rem !important;
+    padding: 1rem;
+    margin-top: 0;
+  }
+  .destacados-container {
+    padding: 1rem 1rem 0 1rem;
+  }
+}

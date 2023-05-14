@@ -114,7 +114,14 @@
 .abrir-mapas-btn button:hover {
   filter: brightness(1.2);
 }
-
+@media (max-width: 991.98px) {
+  .contactos-header {
+    margin: -1rem;
+  }
+  .contactos-cards-container {
+    padding: 1rem 2rem;
+  }
+}
 @media (max-width: 567px) {
   .contactos-image-header-container {
     height: auto;
