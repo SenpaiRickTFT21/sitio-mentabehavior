@@ -2,10 +2,10 @@
   display: none !important;
 }
 .nav-bckg-color {
-  background-color: #000142 !important;
+  background-color: #000142;
 }
 .nav-bckg-transparent {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 nav {
   z-index: 1000;

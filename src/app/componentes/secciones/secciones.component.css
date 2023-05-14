@@ -138,6 +138,17 @@
 }
 
 @media (max-width: 991.98px) {
+  .lista-titulo-tdah {
+    background-color: #ffff;
+    color: black;
+    margin-bottom: 0;
+    padding-left: 0.75rem;
+  }
+  .lista-titulo-tdah p {
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.5rem;
+  }
   .secciones-header {
     margin: -1rem;
   }
