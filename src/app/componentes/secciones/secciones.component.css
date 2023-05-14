@@ -194,6 +194,7 @@
   }
   .foro-descripcion-container {
     flex-basis: 100%;
+    padding-top: 1.5rem;
   }
   .foro-img {
     height: 12rem;

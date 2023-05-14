@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private renderer: Renderer2
   ) {
     this.route.queryParams.subscribe((params) => {
       this.returnUrl = params.returnUrl || '/';
@@ -41,6 +42,7 @@ export class LoginComponent implements OnInit {
         password: this.password,
       });
       console.log(response);
+      this.renderer.setProperty(window, 'scrollTo', 0);
       this.router.navigateByUrl(this.returnUrl);
     } catch (error) {
       this.errorMessage = error;
@@ -52,6 +54,7 @@ export class LoginComponent implements OnInit {
       .loginconGoogle()
       .then((response) => {
         this.errorMessage = null;
+        this.renderer.setProperty(window, 'scrollTo', 0);
         this.router.navigateByUrl(this.returnUrl);
       })
       .catch((error) => {

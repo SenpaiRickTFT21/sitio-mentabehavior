@@ -1,16 +1,18 @@
-<header>
-  <app-top-nav [ngClass]="{ nav: true }"></app-top-nav>
-</header>
-<ng-container *ngIf="router.url == '/'">
-  <app-home-landing></app-home-landing>
-</ng-container>
-<ng-container *ngIf="router.url !== '/'">
-  <main class="grid main-container">
-    <div class="left-margin g-col-0 g-col-xxl-2"></div>
-    <div class="center-container g-col-12 g-col-xl-10 g-col-xxl-8">
-      <router-outlet></router-outlet>
-      <div class="push"></div>
-    </div>
-  </main>
-</ng-container>
-<app-footer></app-footer>
+<div style="width: 100%; overflow: hidden">
+  <header>
+    <app-top-nav [ngClass]="{ nav: true }"></app-top-nav>
+  </header>
+  <ng-container *ngIf="router.url == '/'">
+    <app-home-landing></app-home-landing>
+  </ng-container>
+  <ng-container *ngIf="router.url !== '/'">
+    <main class="grid main-container">
+      <div class="left-margin g-col-0 g-col-xxl-2"></div>
+      <div class="center-container g-col-12 g-col-xl-10 g-col-xxl-8">
+        <router-outlet></router-outlet>
+        <div class="push"></div>
+      </div>
+    </main>
+  </ng-container>
+  <app-footer></app-footer>
+</div>

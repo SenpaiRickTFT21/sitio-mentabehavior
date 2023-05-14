@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -17,7 +17,8 @@ export class RegistrarUserComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +32,7 @@ export class RegistrarUserComponent implements OnInit {
         this.errorMessage = null;
         this.logged = true;
         setTimeout(() => {
+          this.renderer.setProperty(window, 'scrollTo', 0);
           this.router.navigateByUrl(this.returnUrl);
         }, 3000);
       })
@@ -47,6 +49,7 @@ export class RegistrarUserComponent implements OnInit {
         this.errorMessage = null;
         this.logged = true;
         setTimeout(() => {
+          this.renderer.setProperty(window, 'scrollTo', 0);
           this.router.navigateByUrl(this.returnUrl);
         }, 3000);
       })

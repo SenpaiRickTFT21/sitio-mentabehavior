@@ -118,10 +118,22 @@
   .contactos-header {
     margin: -1rem;
   }
-  .contactos-cards-container {
-    padding: 1rem 2rem;
+  .card-item {
+    margin: 0.5rem 1.35rem;
+  }
+  h2 {
+    margin: auto;
+    width: 600px;
   }
 }
+
+@media (max-width: 779px) {
+  h2 {
+    margin: auto 1rem auto -3rem;
+    width: 500px;
+  }
+}
+
 @media (max-width: 567px) {
   .contactos-image-header-container {
     height: auto;
@@ -129,5 +141,25 @@
 
   h2 {
     font-size: 1.25rem;
+    margin: auto 1rem auto -3rem;
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card-item {
+    max-width: 250px;
+  }
+  h2 {
+    width: 250px;
+  }
+}
+
+@media (max-width: 250px) {
+  .card-item {
+    max-width: 150;
+  }
+  h2 {
+    width: 150;
   }
 }

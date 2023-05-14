@@ -13,12 +13,7 @@ export class DestacadosComponent implements OnInit {
 
   navigateToSeccion(id: string) {
     //console.log('Selected id:string:', article);
-
-    this.renderer.setProperty(window, 'scrollTo', {
-      top: 0,
-      behavior: 'smooth',
-    });
-
+    this.renderer.setProperty(window, 'scrollTo', 0);
     this.router.navigate(['/secciones', id]);
   }
 }
