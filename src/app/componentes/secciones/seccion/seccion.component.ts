@@ -26,7 +26,9 @@ export class SeccionComponent implements OnInit {
 
   async getArticulosBySeccion(): Promise<void> {
     try {
-      this.articulos = await this.articuloService.getArticulosBySeccion('tdah');
+      this.articulos = await this.articuloService.getArticulosBySeccion(
+        this.articuloID
+      );
       console.log(this.articulos);
     } catch (error) {
       console.error('Error retrieving articulos: ', error);

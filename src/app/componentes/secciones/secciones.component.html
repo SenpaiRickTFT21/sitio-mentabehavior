@@ -1,8 +1,12 @@
 <ng-container *ngIf="articuloID === 'tdah'">
-  <app-seccion
-    [articuloID]="articuloID"
-    [contenido]="contenidoTDAH"
-    [articulos]="articulosTDAH"
-  >
+  <app-seccion [articuloID]="articuloID" [contenido]="contenidoTDAH">
+  </app-seccion>
+</ng-container>
+<ng-container *ngIf="articuloID === 'padres'">
+  <app-seccion [articuloID]="articuloID" [contenido]="contenidoPadres">
+  </app-seccion>
+</ng-container>
+<ng-container *ngIf="articuloID === 'jovenes'">
+  <app-seccion [articuloID]="articuloID" [contenido]="contenidoJovenes">
   </app-seccion>
 </ng-container>

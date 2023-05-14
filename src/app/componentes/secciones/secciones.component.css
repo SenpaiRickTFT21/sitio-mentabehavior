@@ -11,7 +11,7 @@
   font-weight: 500;
 }
 
-.tdha-title-container {
+.tdah-title-container {
   background-image: linear-gradient(
     to right,
     rgb(102, 11, 159) 0%,
@@ -19,11 +19,22 @@
   );
 }
 
+.jovenes-title-container {
+  background-image: linear-gradient(to right, #e3651c 0%, #be5315 100%);
+}
+
+.padres-title-container {
+  background-image: linear-gradient(
+    to right,
+    rgb(77, 47, 21) 0%,
+    rgb(124, 92, 62) 100%
+  );
+}
+
 .secciones-image-header-container img {
   height: fit-content;
 }
 .secciones-image-header-container {
-  background-image: url("../../../assets/img/padres-secciones.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -35,7 +46,7 @@
 }
 
 .comunidad-title-container {
-  background-color: rgb(66, 83, 106);
+  background-color: rgb(78, 92, 113);
   flex-basis: 50%;
   padding: 2rem;
 }
@@ -91,6 +102,12 @@
 .tdah-foro-btn {
   background-color: rgb(102, 11, 159);
 }
+.jovenes-foro-btn {
+  background-color: #e3651c;
+}
+.padres-foro-btn {
+  background-color: rgb(114, 76, 43);
+}
 .foro-img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,6 +144,15 @@
 .lista-titulo-tdah {
   background-color: #460476;
 }
+
+.lista-titulo-padres {
+  background-color: rgb(77, 47, 21);
+}
+
+.lista-titulo-jovenes {
+  background-color: #e3651c;
+}
+
 .contenido-item-title {
   color: rgb(66, 70, 72);
 }

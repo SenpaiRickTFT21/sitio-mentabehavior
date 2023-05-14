@@ -2,11 +2,18 @@
   <div class="secciones-header">
     <div
       class="title-container"
-      [class.tdha-title-container]="articuloID === 'tdah'"
+      [class.tdah-title-container]="articuloID === 'tdah'"
+      [class.padres-title-container]="articuloID === 'padres'"
+      [class.jovenes-title-container]="articuloID === 'jovenes'"
     >
       <h1>{{ contenido.titulo }}</h1>
     </div>
-    <div class="secciones-image-header-container">
+    <div
+      class="secciones-image-header-container"
+      [ngStyle]="{
+        'background-image': 'url(' + contenido.headerImg + ')'
+      }"
+    >
       <div class="comunidad-title-container">
         <h4>{{ contenido.subtitulo }}</h4>
         <h2>¿Qué debo saber sobre esta comunidad?</h2>
@@ -28,13 +35,26 @@
         </div>
       </div>
       <div class="foro-btn-container">
-        <button type="button" class="btn btn-primary foro-btn tdah-foro-btn">
+        <button
+          type="button"
+          class="btn btn-primary foro-btn"
+          [class.padres-foro-btn]="articuloID === 'padres'"
+          [class.tdah-foro-btn]="articuloID === 'tdah'"
+          [class.jovenes-foro-btn]="articuloID === 'jovenes'"
+        >
           Ir al foro
         </button>
       </div>
     </div>
     <div id="listaArticulos" class="articulos-lista-container">
-      <div class="lista-titulo lista-titulo-tdah"><p>Contenido</p></div>
+      <div
+        class="lista-titulo"
+        [class.lista-titulo-tdah]="articuloID === 'tdah'"
+        [class.lista-titulo-padres]="articuloID === 'padres'"
+        [class.lista-titulo-jovenes]="articuloID === 'jovenes'"
+      >
+        <p>Contenido</p>
+      </div>
       <div *ngFor="let tag of getUniqueTags()">
         <div>
           <p
@@ -49,7 +69,6 @@
             >
               {{ tag }}
               <!-- Display the tag value as the category -->
-
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
