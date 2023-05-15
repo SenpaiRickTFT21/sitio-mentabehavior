@@ -36,7 +36,8 @@ nav a {
 }
 
 .focus {
-  border-bottom: 1px solid #1bb1c6;
+  background-color: #ffffff25;
+  border-radius: 10px;
   color: #fff;
 }
 
