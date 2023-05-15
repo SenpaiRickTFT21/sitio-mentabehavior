@@ -35,6 +35,11 @@ nav a {
   padding: 0 1rem;
 }
 
+.focus {
+  border-bottom: 1px solid #1bb1c6;
+  color: #fff;
+}
+
 #navbarNav2 {
   justify-content: space-between !important;
 }

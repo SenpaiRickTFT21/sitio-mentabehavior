@@ -1,12 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { User } from 'firebase/auth';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
-  styleUrls: ['./top-nav.component.css'],
+  styleUrls: [
+    './top-nav.component.css',
+    '../home-landing/billboard/billboard.component.css',
+  ],
 })
 export class TopNavComponent implements OnInit {
   loggedIn = false;
@@ -14,9 +18,14 @@ export class TopNavComponent implements OnInit {
   isCollapsed: boolean = true;
   @Input() currentRoute: string;
   isCollapsedProfile = true;
+  closeResult: string;
 
-  constructor(private userService: UserService, private router: Router) {
-    this.currentRoute = '/';
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private modalService: NgbModal
+  ) {
+    this.currentRoute = '';
   }
 
   ngOnInit(): void {
@@ -29,6 +38,15 @@ export class TopNavComponent implements OnInit {
         this.userEmail = undefined;
       }
     });
+  }
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
+
+  navigateToTest(id: string) {
+    this.modalService.dismissAll(); // Close the modal
+    this.router.navigate(['/tests', id]);
   }
 
   async logout() {

@@ -16,8 +16,8 @@ export class SeccionesComponent implements OnInit {
     descripcionTitulo: '"Voces del TDA-H: Compartiendo Experiencias y Apoyo"',
     descripcion:
       'Queremos brindar un espacio seguro y amigable donde las personas afectadas por el TDA-H, ya sean pacientes, familiares o profesionales, puedan compartir sus historias, conocimientos y consejos. Este foro es una oportunidad para',
-    headerImg: '"./assets/img/padres-secciones.png"',
-    foroImg: '"./assets/img/foro-tdah-img.jpeg"',
+    headerImg: '"./assets/img/tdah-img-header.png"',
+    foroImg: '"./assets/img/tdah-foro-img.jpeg"',
   };
 
   contenidoPadres = {
@@ -27,7 +27,7 @@ export class SeccionesComponent implements OnInit {
     descripcion:
       'Queremos brindar un espacio seguro y amigable donde las personas afectadas por el TDA-H, ya sean pacientes, familiares o profesionales, puedan compartir sus historias, conocimientos y consejos. Este foro es una oportunidad para',
     headerImg: '"./assets/img/padres-secciones.png"',
-    foroImg: '"./assets/img/foro-tdah-img.jpeg"',
+    foroImg: '"./assets/img/padres-foro-img.webp"',
   };
 
   contenidoJovenes = {
@@ -36,7 +36,7 @@ export class SeccionesComponent implements OnInit {
     descripcionTitulo: '"Voces del TDA-H: Compartiendo Experiencias y Apoyo"',
     descripcion:
       'Queremos brindar un espacio seguro y amigable donde las personas afectadas por el TDA-H, ya sean pacientes, familiares o profesionales, puedan compartir sus historias, conocimientos y consejos. Este foro es una oportunidad para',
-    headerImg: '"./assets/img/padres-secciones.png"',
+    headerImg: '"./assets/img/jovenes-img-header.png"',
     foroImg: '"./assets/img/foro-tdah-img.jpeg"',
   };
 
