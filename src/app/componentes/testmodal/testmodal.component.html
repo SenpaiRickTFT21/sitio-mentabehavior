@@ -1,0 +1,56 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title fs-5" id="exampleModalLabel">
+      Por favor elige la prueba que deseas realizar
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      (click)="activeModal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <div>
+      <div class="test-tipo-container">
+        <div class="test-img-container">
+          <img
+            (click)="navigateToTest('adulto')"
+            src="./assets/img/joven-patineta.jpeg"
+          />
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-link"
+            (click)="navigateToTest('adulto')"
+          >
+            Jóvenes/adulto(a)s
+          </button>
+          <p>(mayores de edad)</p>
+        </div>
+      </div>
+      <div class="test-tipo-container">
+        <div class="test-img-container">
+          <img
+            (click)="navigateToTest('nino')"
+            src="./assets/img/nino-corre.png"
+          />
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-link"
+            (click)="navigateToTest('nino')"
+          >
+            Niño(a)s
+          </button>
+          <p>(los padres deben responderlo)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer"></div>
+</div>

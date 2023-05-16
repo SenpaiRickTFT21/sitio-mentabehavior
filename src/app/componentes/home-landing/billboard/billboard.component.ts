@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TestModalComponent } from '../../testmodal/testmodal.component';
 
 @Component({
   selector: 'app-billboard',
@@ -20,8 +21,9 @@ export class BillboardComponent implements OnInit {
     el.scrollIntoView();
   }
 
-  open(content: any) {
-    this.modalService.open(content);
+  open() {
+    const modalRef = this.modalService.open(TestModalComponent);
+    modalRef.componentInstance.id = 'myId'; // You can pass data to your modal component here
   }
 
   navigateToTest(id: string) {
