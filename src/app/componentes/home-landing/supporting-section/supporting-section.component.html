@@ -2,20 +2,22 @@
   <div class="g-col-1 g-col-lg-2"></div>
   <div class="g-lg-col-8 g-col-md-8 g-col-sm-12 supporting-section-container">
     <div class="description-container">
-      <h2 data-aos="fade-left" data-aos-duration="600">{{ title }}</h2>
+      <h2 data-aos="fade-left" data-aos-duration="600">
+        {{ articuloPrincipal?.titulo }}
+      </h2>
       <p data-aos="fade-right" data-aos-duration="600">
-        {{ description }}
+        {{ articuloPrincipal?.descripcion }}
         <br /><button
           type="button"
           class="btn btn-link"
-          (click)="navigateToArticle(articuloID)"
+          (click)="navigateToArticle(articuloId)"
         >
           Seguir leyendo...
         </button>
       </p>
     </div>
     <div class="img-container">
-      <img src="{{ backgroundImageUrl }}" />
+      <img src="{{ articuloPrincipal?.imagenes[1].imgUrl }}" />
     </div>
   </div>
   <div class="g-col-1 g-col-lg-2"></div>

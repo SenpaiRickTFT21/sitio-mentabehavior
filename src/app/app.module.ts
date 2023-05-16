@@ -23,16 +23,9 @@ import { AutenticacionModule } from './componentes/autenticacion/autenticacion.m
 import { ContactosModule } from './componentes/contactos/contactos.module';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CrearArticuloComponent } from './componentes/crear-articulo/crear-articulo.component';
-import { TestsComponent } from './componentes/tests/tests.component';
+import { HomeLandingComponent } from './componentes/home-landing/home-landing.component';
 
 const appRoutes: Routes = [
-  {
-    path: '',
-    loadChildren: () =>
-      import('./componentes/home-landing/home-landing.module').then(
-        (m) => m.HomeLandingModule
-      ),
-  },
   {
     path: 'signup',
     loadChildren: () =>
@@ -79,8 +72,13 @@ const appRoutes: Routes = [
   },
   {
     path: 'tests/:id',
-    component: TestsComponent,
+    loadChildren: () =>
+      import('./componentes/tests/tests.module').then((m) => m.TestsModule),
     canActivate: [AuthGuard],
+  },
+  {
+    path: '',
+    component: HomeLandingComponent,
   },
 ];
 

@@ -1,15 +1,6 @@
 <app-billboard></app-billboard>
 
-<ng-container *ngFor="let articulo of articulos">
-  <app-supporting-section
-    *ngIf="articulo.artPrincipal"
-    [title]="articulo.titulo"
-    [description]="articulo.descripcion"
-    [backgroundImageUrl]="articulo.imagenes[1].imgUrl"
-    [articuloID]="articulo.id"
-  >
-  </app-supporting-section>
-</ng-container>
+<app-supporting-section> </app-supporting-section>
 
 <div>
   <app-destacados></app-destacados>

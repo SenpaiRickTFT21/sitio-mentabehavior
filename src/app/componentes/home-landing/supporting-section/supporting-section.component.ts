@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import AOS from 'aos';
+import { ArticuloService } from '../../../services/articulo.service';
+import { Articulo } from '../../../models/articulo';
 
 @Component({
   selector: 'app-supporting-section',
@@ -11,23 +12,27 @@ import AOS from 'aos';
   ],
 })
 export class SupportingSectionComponent implements OnInit {
-  @Input() title: string;
-  @Input() description: string;
-  @Input() backgroundImageUrl: string;
-  @Input() articuloID: string;
+  articuloId = '9xFDgB0jsaDRoPz6qHSj';
+  articuloPrincipal: Articulo;
 
   constructor(
     private router: Router,
     private renderer: Renderer2,
-    private elementRef: ElementRef
+    private articuloService: ArticuloService
   ) {}
 
-  ngOnInit(): void {
-    AOS.init();
+  async ngOnInit(): Promise<void> {
+    const art = await this.articuloService.getArticulo(this.articuloId);
+    if (art) {
+      this.articuloPrincipal = art;
+    }
+    if (!this.articuloPrincipal) {
+      console.error('Articulo not found');
+    }
   }
 
   navigateToArticle(article) {
     this.renderer.setProperty(window, 'scrollTo', 0);
-    this.router.navigate(['/articulo', this.articuloID]);
+    this.router.navigate(['/articulo', this.articuloId]);
   }
 }
