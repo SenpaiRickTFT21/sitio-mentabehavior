@@ -127,7 +127,7 @@
             <a class="nav-link login-link" href="login">Acceder</a>
           </li>
           <li class="nav-item" [ngClass]="{ hide: loggedIn }">
-            <a class="nav-link signup-link" href="signup"
+            <a class="nav-link signup-link" (click)="navigateTo('/signup')"
               >Crear cuenta gratis</a
             >
           </li></ng-container
