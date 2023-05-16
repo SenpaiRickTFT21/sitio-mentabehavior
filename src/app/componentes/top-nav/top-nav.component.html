@@ -1,8 +1,10 @@
 <nav
   class="navbar navbar-expand-lg navbar-dark navbar-expand-md nav-bckg-color"
   data-bs-theme="dark"
-  [class.collapsed-background]="!isCollapsed"
-  [class.nav-bckg-transparent]="fondoTransparente()"
+  [ngClass]="{
+    'collapsed-background': !isCollapsed,
+    'nav-bckg-transparent': fondoTransparente()
+  }"
 >
   <div class="container-fluid">
     <a
@@ -36,39 +38,15 @@
     <div
       class="collapse navbar-collapse"
       id="navbarNav2"
-      [class.hide]="currentRoute.includes('login')"
+      [ngClass]="{ hide: currentRoute.includes('login') }"
     >
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item" *ngFor="let item of navItems">
           <a
             class="nav-link"
-            href="secciones/tdah"
-            [class.focus]="currentRoute === '/secciones/tdah'"
-            >TDAH</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.focus]="currentRoute === '/secciones/jovenes'"
-            href="secciones/jovenes"
-            >Jóvenes</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.focus]="currentRoute === '/secciones/padres'"
-            href="secciones/padres"
-            >Padres</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.focus]="currentRoute === '/contactos'"
-            href="contactos"
-            >Contactos</a
+            (click)="navigateTo(item.route)"
+            [class.focus]="currentRoute === '/' + item.route"
+            >{{ item.name }}</a
           >
         </li>
         <li *ngIf="currentRoute != '/'" class="nav-item">

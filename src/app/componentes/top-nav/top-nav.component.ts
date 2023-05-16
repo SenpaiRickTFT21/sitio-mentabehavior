@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { User } from 'firebase/auth';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TestModalComponent } from '../testmodal/testmodal.component';
 
@@ -14,12 +13,20 @@ import { TestModalComponent } from '../testmodal/testmodal.component';
   ],
 })
 export class TopNavComponent implements OnInit {
-  loggedIn: boolean | undefined = undefined;
-  userEmail: string | undefined;
+  @Input() loggedIn: boolean | undefined = undefined;
+  @Input() userEmail: string | undefined;
   isCollapsed: boolean = true;
   @Input() currentRoute: string | undefined;
   isCollapsedProfile = true;
   closeResult: string;
+
+  // En tu componente
+  navItems = [
+    { route: 'secciones/tdah', name: 'TDAH' },
+    { route: 'secciones/jovenes', name: 'Jóvenes' },
+    { route: 'secciones/padres', name: 'Padres' },
+    { route: 'contactos', name: 'Contactos' },
+  ];
 
   constructor(
     private userService: UserService,
@@ -27,17 +34,7 @@ export class TopNavComponent implements OnInit {
     private modalService: NgbModal
   ) {}
 
-  ngOnInit(): void {
-    this.userService.auth.onAuthStateChanged((user: User | null) => {
-      if (user) {
-        this.loggedIn = true;
-        this.userEmail = user.email;
-      } else {
-        this.loggedIn = false;
-        this.userEmail = undefined;
-      }
-    });
-  }
+  ngOnInit(): void {}
 
   open() {
     const modalRef = this.modalService.open(TestModalComponent);
@@ -61,5 +58,9 @@ export class TopNavComponent implements OnInit {
       this.currentRoute.includes('login') ||
       this.currentRoute === '/'
     );
+  }
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
   }
 }
