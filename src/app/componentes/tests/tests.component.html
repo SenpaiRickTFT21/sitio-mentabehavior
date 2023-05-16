@@ -1,8 +1,14 @@
-<div>
-  <ng-container *ngIf="id === 'adulto'; else ninoComponent">
-    <app-test-adulto></app-test-adulto>
-  </ng-container>
-  <ng-template #ninoComponent>
-    <app-test-nino></app-test-nino>
-  </ng-template>
-</div>
+<main class="grid main-container">
+  <div class="left-margin g-col-0 g-col-xxl-2"></div>
+  <div class="center-container g-col-12 g-col-xl-10 g-col-xxl-8">
+    <!--<div class="push"></div>-->
+    <div>
+      <ng-container *ngIf="id === 'adulto'; else ninoComponent">
+        <app-test-adulto></app-test-adulto>
+      </ng-container>
+      <ng-template #ninoComponent>
+        <app-test-nino></app-test-nino>
+      </ng-template>
+    </div>
+  </div>
+</main>

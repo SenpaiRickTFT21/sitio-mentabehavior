@@ -5,6 +5,14 @@ import { SupportingSectionComponent } from './supporting-section/supporting-sect
 import { DestacadosComponent } from './destacados/destacados.component';
 import { BillboardComponent } from './billboard/billboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  {
+    path: '',
+    component: HomeLandingComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -13,7 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DestacadosComponent,
     BillboardComponent,
   ],
-  imports: [CommonModule, NgbModule],
+  imports: [CommonModule, NgbModule, RouterModule.forChild(routes)],
   exports: [HomeLandingComponent],
 })
 export class HomeLandingModule {}

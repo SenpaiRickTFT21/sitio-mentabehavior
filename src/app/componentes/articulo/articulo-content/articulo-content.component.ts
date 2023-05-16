@@ -6,7 +6,11 @@ import { Articulo } from '../../../models/articulo';
 @Component({
   selector: 'app-articulo-content',
   templateUrl: './articulo-content.component.html',
-  styleUrls: ['./articulo-content.component.scss', '../articulo.component.css'],
+  styleUrls: [
+    './articulo-content.component.scss',
+    '../articulo.component.css',
+    '../../../app.component.css',
+  ],
 })
 export class ArticuloContentComponent implements OnInit {
   articulo: Articulo;

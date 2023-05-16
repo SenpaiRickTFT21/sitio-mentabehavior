@@ -1,12 +1,17 @@
-<ng-container *ngIf="articuloID === 'tdah'">
-  <app-seccion [articuloID]="articuloID" [contenido]="contenidoTDAH">
-  </app-seccion>
-</ng-container>
-<ng-container *ngIf="articuloID === 'padres'">
-  <app-seccion [articuloID]="articuloID" [contenido]="contenidoPadres">
-  </app-seccion>
-</ng-container>
-<ng-container *ngIf="articuloID === 'jovenes'">
-  <app-seccion [articuloID]="articuloID" [contenido]="contenidoJovenes">
-  </app-seccion>
-</ng-container>
+<main class="grid main-container">
+  <div class="left-margin g-col-0 g-col-xxl-2"></div>
+  <div class="center-container g-col-12 g-col-xl-10 g-col-xxl-8">
+    <ng-container *ngIf="articuloID === 'tdah'">
+      <app-seccion [articuloID]="articuloID" [contenido]="contenidoTDAH">
+      </app-seccion>
+    </ng-container>
+    <ng-container *ngIf="articuloID === 'padres'">
+      <app-seccion [articuloID]="articuloID" [contenido]="contenidoPadres">
+      </app-seccion>
+    </ng-container>
+    <ng-container *ngIf="articuloID === 'jovenes'">
+      <app-seccion [articuloID]="articuloID" [contenido]="contenidoJovenes">
+      </app-seccion>
+    </ng-container>
+  </div>
+</main>

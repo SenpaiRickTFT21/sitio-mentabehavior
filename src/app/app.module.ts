@@ -77,7 +77,7 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: '',
+    path: '#',
     component: HomeLandingComponent,
   },
 ];

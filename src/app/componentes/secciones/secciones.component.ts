@@ -5,7 +5,7 @@ import { ArticuloService } from '../../services/articulo.service';
 @Component({
   selector: 'app-secciones',
   templateUrl: './secciones.component.html',
-  styleUrls: ['./secciones.component.css'],
+  styleUrls: ['./secciones.component.css', '../../app.component.css'],
 })
 export class SeccionesComponent implements OnInit {
   articuloID: string;
