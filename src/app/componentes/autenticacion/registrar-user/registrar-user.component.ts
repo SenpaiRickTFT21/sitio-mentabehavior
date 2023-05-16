@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-registrar-user',
   templateUrl: './registrar-user.component.html',
-  styleUrls: ['./registrar-user.component.css'],
+  styleUrls: ['./registrar-user.component.css', '../../../app.component.css'],
 })
 export class RegistrarUserComponent implements OnInit {
   email: string;
@@ -51,7 +51,7 @@ export class RegistrarUserComponent implements OnInit {
         setTimeout(() => {
           this.renderer.setProperty(window, 'scrollTo', 0);
           this.router.navigateByUrl(this.returnUrl);
-        }, 3000);
+        }, 500);
       })
       .catch((error) => {
         this.errorMessage = error.message;

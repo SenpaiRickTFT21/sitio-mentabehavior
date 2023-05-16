@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import AOS from 'aos';
 
 @Component({
   selector: 'app-billboard',
@@ -14,9 +13,7 @@ export class BillboardComponent implements OnInit {
 
   constructor(private router: Router, private modalService: NgbModal) {}
 
-  ngOnInit(): void {
-    AOS.init();
-  }
+  ngOnInit(): void {}
 
   scrolltoDestacados(id) {
     let el = document.getElementById(id);
