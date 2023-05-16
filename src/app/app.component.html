@@ -3,6 +3,8 @@
     <app-top-nav
       [ngClass]="{ nav: true }"
       [currentRoute]="appCurrentRoute"
+      [loggedIn]="isLoggedIn"
+      [userEmail]="userEmail"
     ></app-top-nav>
   </header>
 
