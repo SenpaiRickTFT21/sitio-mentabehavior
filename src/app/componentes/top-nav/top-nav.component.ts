@@ -3,6 +3,7 @@ import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { User } from 'firebase/auth';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TestModalComponent } from '../testmodal/testmodal.component';
 
 @Component({
   selector: 'app-top-nav',
@@ -38,8 +39,9 @@ export class TopNavComponent implements OnInit {
     });
   }
 
-  open(content: any) {
-    this.modalService.open(content);
+  open() {
+    const modalRef = this.modalService.open(TestModalComponent);
+    modalRef.componentInstance.id = 'myId'; // You can pass data to your modal component here
   }
 
   navigateToTest(id: string) {

@@ -24,6 +24,7 @@ import { ContactosModule } from './componentes/contactos/contactos.module';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CrearArticuloComponent } from './componentes/crear-articulo/crear-articulo.component';
 import { HomeLandingComponent } from './componentes/home-landing/home-landing.component';
+import { TestModalComponent } from './componentes/testmodal/testmodal.component';
 
 const appRoutes: Routes = [
   {
@@ -83,7 +84,12 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, CrearArticuloComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    CrearArticuloComponent,
+    TestModalComponent,
+  ],
   imports: [
     NgbModule,
     BrowserModule,
