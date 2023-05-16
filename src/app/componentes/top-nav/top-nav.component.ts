@@ -16,7 +16,7 @@ export class TopNavComponent implements OnInit {
   loggedIn: boolean | undefined = undefined;
   userEmail: string | undefined;
   isCollapsed: boolean = true;
-  @Input() currentRoute: string;
+  @Input() currentRoute: string | undefined;
   isCollapsedProfile = true;
   closeResult: string;
 
@@ -24,9 +24,7 @@ export class TopNavComponent implements OnInit {
     private userService: UserService,
     private router: Router,
     private modalService: NgbModal
-  ) {
-    this.currentRoute = '';
-  }
+  ) {}
 
   ngOnInit(): void {
     this.userService.auth.onAuthStateChanged((user: User | null) => {
@@ -53,5 +51,13 @@ export class TopNavComponent implements OnInit {
     await this.userService.auth.signOut();
     this.isCollapsedProfile = true;
     this.router.navigate(['/']);
+  }
+
+  fondoTransparente(): boolean {
+    return (
+      this.currentRoute.includes('articulo/') ||
+      this.currentRoute.includes('login') ||
+      this.currentRoute === '/'
+    );
   }
 }

@@ -51,7 +51,7 @@ export class RegistrarUserComponent implements OnInit {
         setTimeout(() => {
           this.renderer.setProperty(window, 'scrollTo', 0);
           this.router.navigateByUrl(this.returnUrl);
-        }, 500);
+        }, 2000);
       })
       .catch((error) => {
         this.errorMessage = error.message;
