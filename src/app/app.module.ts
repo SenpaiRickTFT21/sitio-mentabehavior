@@ -53,6 +53,7 @@ const appRoutes: Routes = [
       import('./componentes/articulo/articulo.module').then(
         (m) => m.ArticuloModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'secciones/:id',
@@ -60,6 +61,7 @@ const appRoutes: Routes = [
       import('./componentes/secciones/secciones.module').then(
         (m) => m.SeccionesModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'contactos',
@@ -67,6 +69,7 @@ const appRoutes: Routes = [
       import('./componentes/contactos/contactos.module').then(
         (m) => m.ContactosModule
       ),
+    canActivate: [AuthGuard],
   },
 
   {

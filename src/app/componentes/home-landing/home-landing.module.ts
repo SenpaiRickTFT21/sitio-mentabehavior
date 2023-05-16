@@ -14,7 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DestacadosComponent,
     BillboardComponent,
   ],
-  imports: [CommonModule, TopNavModule, NgbModule],
+  imports: [CommonModule, NgbModule],
   exports: [HomeLandingComponent],
 })
 export class HomeLandingModule {}
