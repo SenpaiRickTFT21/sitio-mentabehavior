@@ -13,7 +13,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   ],
 })
 export class TopNavComponent implements OnInit {
-  loggedIn = false;
+  loggedIn: boolean | undefined = undefined;
   userEmail: string | undefined;
   isCollapsed: boolean = true;
   @Input() currentRoute: string;

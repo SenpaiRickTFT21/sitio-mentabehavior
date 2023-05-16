@@ -21,25 +21,54 @@ import { TestsModule } from './componentes/tests/tests.module';
 import { SeccionesModule } from './componentes/secciones/secciones.module';
 import { AutenticacionModule } from './componentes/autenticacion/autenticacion.module';
 import { ContactosModule } from './componentes/contactos/contactos.module';
-import { ArticuloComponent } from './componentes/articulo/articulo.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { HomeLandingComponent } from './componentes/home-landing/home-landing.component';
 import { CrearArticuloComponent } from './componentes/crear-articulo/crear-articulo.component';
-import { RegistrarUserComponent } from './componentes/autenticacion/registrar-user/registrar-user.component';
-import { LoginComponent } from './componentes/autenticacion/login/login.component';
 import { TestsComponent } from './componentes/tests/tests.component';
-import { SeccionesComponent } from './componentes/secciones/secciones.component';
-import { ContactosComponent } from './componentes/contactos/contactos.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeLandingComponent },
-  { path: 'signup', component: RegistrarUserComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./componentes/home-landing/home-landing.module').then(
+        (m) => m.HomeLandingModule
+      ),
+  },
+  {
+    path: 'signup',
+    loadChildren: () =>
+      import('./componentes/autenticacion/autenticacion.module').then(
+        (m) => m.AutenticacionModule
+      ),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./componentes/autenticacion/autenticacion.module').then(
+        (m) => m.AutenticacionModule
+      ),
+  },
   {
     path: 'articulo/:id',
-    component: ArticuloComponent,
-    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./componentes/articulo/articulo.module').then(
+        (m) => m.ArticuloModule
+      ),
   },
+  {
+    path: 'secciones/:id',
+    loadChildren: () =>
+      import('./componentes/secciones/secciones.module').then(
+        (m) => m.SeccionesModule
+      ),
+  },
+  {
+    path: 'contactos',
+    loadChildren: () =>
+      import('./componentes/contactos/contactos.module').then(
+        (m) => m.ContactosModule
+      ),
+  },
+
   {
     path: 'crear-articulo',
     component: CrearArticuloComponent,
@@ -50,25 +79,10 @@ const appRoutes: Routes = [
     component: TestsComponent,
     canActivate: [AuthGuard],
   },
-  {
-    path: 'secciones/:id',
-    component: SeccionesComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'contactos',
-    component: ContactosComponent,
-    canActivate: [AuthGuard],
-  },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    CrearArticuloComponent,
-    ContactosComponent,
-  ],
+  declarations: [AppComponent, FooterComponent, CrearArticuloComponent],
   imports: [
     NgbModule,
     BrowserModule,

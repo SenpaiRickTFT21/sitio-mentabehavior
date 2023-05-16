@@ -24,10 +24,11 @@ export class ArticuloContentComponent implements OnInit {
     if (!this.articulo) {
       console.error('Articulo not found');
     }
-    if (this.articulo) {
-      this.imagenPortada = this.articulo.imagenes.find(
+    if (this.articulo && this.articulo.imagenes) {
+      const imagenPortada = this.articulo.imagenes.find(
         (img) => img.imgPortada
-      ).imgUrl;
+      );
+      this.imagenPortada = imagenPortada ? imagenPortada.imgUrl : null;
     }
   }
 }

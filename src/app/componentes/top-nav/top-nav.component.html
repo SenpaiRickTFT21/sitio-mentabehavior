@@ -1,4 +1,5 @@
 <nav
+  *ngIf="loggedIn !== undefined"
   class="navbar navbar-expand-lg navbar-dark navbar-expand-md nav-bckg-color"
   data-bs-theme="dark"
   [class.collapsed-background]="!isCollapsed"
@@ -142,12 +143,16 @@
             </div>
           </div>
         </li>
-        <li *ngIf="!loggedIn" class="nav-item">
-          <a class="nav-link login-link" href="login">Acceder</a>
-        </li>
-        <li *ngIf="!loggedIn" class="nav-item">
-          <a class="nav-link signup-link" href="signup">Crear cuenta gratis</a>
-        </li>
+        <ng-container *ngIf="!loggedIn">
+          <li class="nav-item" [ngClass]="{ hide: loggedIn }">
+            <a class="nav-link login-link" href="login">Acceder</a>
+          </li>
+          <li class="nav-item" [ngClass]="{ hide: loggedIn }">
+            <a class="nav-link signup-link" href="signup"
+              >Crear cuenta gratis</a
+            >
+          </li></ng-container
+        >
       </ul>
     </div>
   </div>
@@ -208,14 +213,6 @@
         </div>
       </div>
     </div>
-    <div class="modal-footer">
-      <!--<button
-        type="button"
-        class="btn btn-outline-dark"
-        (click)="modal.close('Save click')"
-      >
-        Ok
-      </button>-->
-    </div>
+    <div class="modal-footer"></div>
   </div>
 </ng-template>
