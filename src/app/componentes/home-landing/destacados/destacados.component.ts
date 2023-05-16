@@ -12,7 +12,6 @@ export class DestacadosComponent implements OnInit {
   ngOnInit(): void {}
 
   navigateToSeccion(id: string) {
-    this.renderer.setProperty(window, 'scrollTo', 0);
     this.router.navigate(['/secciones', id]);
   }
 }
