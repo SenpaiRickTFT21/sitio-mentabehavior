@@ -75,12 +75,8 @@
           <a class="nav-link" (click)="open(mymodal)">Test</a>
         </li>
       </ul>
-      <ul
-        [class.hide]="!loggedIn"
-        class="navbar-nav"
-        style="align-self: flex-end"
-      >
-        <li class="nav-item">
+      <ul class="navbar-nav" style="align-self: flex-end">
+        <li *ngIf="loggedIn" class="nav-item">
           <div class="">
             <div>
               <div
@@ -100,6 +96,7 @@
                 <div
                   #collapse1="ngbCollapse"
                   [(ngbCollapse)]="isCollapsedProfile"
+                  [horizontal]="true"
                   style="max-width: 100%"
                 >
                   <div class="profile-collapse" style="width: 100%">
