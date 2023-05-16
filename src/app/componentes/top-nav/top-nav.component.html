@@ -17,6 +17,7 @@
         src="assets/img/mental-b-logo-hor-white.png"
         alt="Logo"
         class="d-none d-md-block"
+        [class.margintop]="currentRoute === '/login'"
       />
       <img
         class="d-md-none"
@@ -50,7 +51,14 @@
           >
         </li>
         <li *ngIf="currentRoute != '/'" class="nav-item">
-          <a class="nav-link" (click)="open()">Test</a>
+          <a
+            class="nav-link"
+            [class.focus]="
+              currentRoute === '/tests/adulto' || currentRoute === '/tests/nino'
+            "
+            (click)="open()"
+            >Test</a
+          >
         </li>
       </ul>
       <ul class="navbar-nav" style="align-self: flex-end">
