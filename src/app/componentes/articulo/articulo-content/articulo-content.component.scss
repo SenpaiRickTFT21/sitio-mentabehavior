@@ -27,7 +27,6 @@ h1 {
 
 .recursos-container{
   margin-top: .5rem;
-  background-color: #eceff5;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -38,6 +37,49 @@ h1 {
   top: 2rem;
 }
 
+.recursos-container h5{
+  padding: 1rem 1rem .25rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.recursos-container hr{
+  border-top: 1px solid #808080; width: 100%;
+}
+
+.recurso-icon{
+  width: 60px;
+  box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.recurso-icon img{
+  height: 36px;
+  width: auto;
+}
+
+.recursos-container p{
+  text-transform: capitalize !important;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.recurso-item-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-content: center;
+  justify-content: center;
+}
+.recurso-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
 
 
 @media (max-width: 1450px) {
@@ -45,7 +87,7 @@ h1 {
     font-size: 1.75rem;
   }
   .art-image {
-    height: 18rem;
+    height: 15rem;
   }
   .articulo-contenido-container{
     margin-top: auto;

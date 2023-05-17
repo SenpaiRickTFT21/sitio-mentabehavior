@@ -24,6 +24,9 @@ nav a {
   margin-bottom: -2.5rem;
   margin-left: 1rem;
 }
+.margintop {
+  margin-top: 1.85rem;
+}
 .navbar-brand-noshadow {
   box-shadow: none;
 }
@@ -115,9 +118,9 @@ nav a {
   background-color: #fff;
   padding: 0.65rem;
   border-radius: 10px;
-  box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 7px 15px 15px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 10px 24px 15px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 6px 10px 24px 15px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 6px 10px 24px 15px rgba(0, 0, 0, 0.35);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -199,10 +202,7 @@ nav a {
   nav {
     padding: 1rem 3rem 1rem 1.5rem;
   }
-  #navbarNav2 {
-    flex-direction: column !important;
-    align-items: flex-end;
-  }
+
   .profile-container {
     left: 10%;
     right: 10%;
@@ -210,7 +210,28 @@ nav a {
   }
 }
 
+@media (max-width: 992px) {
+  nav {
+    padding: 1rem;
+  }
+  .navbar-brand {
+    padding: 0.5rem;
+  }
+  a {
+    font-size: 0.85rem;
+    padding: 0.25rem;
+  }
+  .nav-item {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (max-width: 767.98px) {
+  .navbar-nav {
+    height: auto;
+    align-items: first baseline;
+    gap: 0.65rem;
+  }
   nav {
     padding: 1rem 0.75rem;
     margin-top: 0;
@@ -222,6 +243,10 @@ nav a {
   }
   .navbar-brand {
     background: none;
+  }
+
+  .profile-btn {
+    margin-top: 0.65rem;
   }
 }
 

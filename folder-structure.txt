@@ -13,14 +13,11 @@
 │   ├── app
 │   │   ├── _helpers
 │   │   │   └── auth.guard.ts
-│   │   ├── animations
-│   │   │   └── slide-right.animation.ts
 │   │   ├── app.component.css
 │   │   ├── app.component.html
 │   │   ├── app.component.spec.ts
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
-│   │   ├── app.server.module.ts
 │   │   ├── componentes
 │   │   │   ├── articulo
 │   │   │   │   ├── articulo-content
@@ -104,6 +101,11 @@
 │   │   │   │   ├── secciones.component.spec.ts
 │   │   │   │   ├── secciones.component.ts
 │   │   │   │   └── secciones.module.ts
+│   │   │   ├── testmodal
+│   │   │   │   ├── testmodal.component.css
+│   │   │   │   ├── testmodal.component.html
+│   │   │   │   ├── testmodal.component.spec.ts
+│   │   │   │   └── testmodal.component.ts
 │   │   │   ├── tests
 │   │   │   │   ├── animations-test
 │   │   │   │   │   └── slide-right.animation.ts
@@ -139,7 +141,54 @@
 │   │       └── user.service.ts
 │   ├── assets
 │   │   ├── favicon_io
+│   │   │   ├── android-chrome-192x192.png
+│   │   │   ├── android-chrome-512x512.png
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── favicon-16x16.png
+│   │   │   ├── favicon-32x32.png
+│   │   │   ├── favicon.ico
+│   │   │   └── site.webmanifest
 │   │   └── img
+│   │       ├── Free Photo Back to school background with school supplies and copy space.html
+│   │       ├── art_1.jpeg
+│   │       ├── billgates.jpeg
+│   │       ├── brain-bg.jpg
+│   │       ├── brain-tree-tall.jpg
+│   │       ├── brain-tree-tall.png
+│   │       ├── brain-tree.png
+│   │       ├── contactos-header-img.jpg
+│   │       ├── electrodos.jpg
+│   │       ├── elefantitoyay.jpeg
+│   │       ├── footer-2.jpg
+│   │       ├── footer.png
+│   │       ├── foro-tdah-img.jpeg
+│   │       ├── joven-patineta.jpeg
+│   │       ├── jovenes-img-header.jpeg
+│   │       ├── jovenes-img-header.png
+│   │       ├── jovenes.jpeg
+│   │       ├── login-backg.jpg
+│   │       ├── login-backg.png
+│   │       ├── login-bckg.jpg
+│   │       ├── logo-mobile.png
+│   │       ├── map-pin-icon.svg
+│   │       ├── mappin.png
+│   │       ├── mental-b-logo-hor-white.png
+│   │       ├── mental-b-logo.png
+│   │       ├── mentalb_navbar_logo.png
+│   │       ├── mentalb_navbar_logoAsset 7.png
+│   │       ├── mente-acuarela.jpg
+│   │       ├── niño-cabezaexplota-bw.png
+│   │       ├── nino-corre.jpeg
+│   │       ├── nino-corre.png
+│   │       ├── nino-mind.png
+│   │       ├── nino-risa.jpg
+│   │       ├── padres-foro-img.webp
+│   │       ├── padres-secciones.png
+│   │       ├── padres.webp
+│   │       ├── tdah-foro-img.jpeg
+│   │       ├── tdah-img-header.png
+│   │       ├── tdah.avif
+│   │       └── welcome.jpg
 │   ├── environments
 │   │   ├── environment.prod.ts
 │   │   └── environment.ts
@@ -156,4 +205,4 @@
 ├── tsconfig.server.json
 └── tsconfig.spec.json
 
-40 directories, 236 files
+34 directories, 172 files
