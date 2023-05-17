@@ -222,7 +222,7 @@ export class TestAdultoComponent implements OnInit {
       this.disclaimerShow();
       this.inatencionShow();
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        //window.scrollTo({ top: 0, behavior: 'smooth' });
         this.hiperactividadShow();
       }, 1000);
     } else if (hide === 'hiperactividad') {

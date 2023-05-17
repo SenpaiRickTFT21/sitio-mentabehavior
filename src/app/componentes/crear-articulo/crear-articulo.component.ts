@@ -1,5 +1,5 @@
 import { Component, Injectable, SecurityContext } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ArticuloService } from '../../services/articulo.service';
 import { Articulo, Documentos, Imagenes } from '../../models/articulo';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
@@ -14,7 +14,7 @@ import {
 @Component({
   selector: 'app-crear-articulo',
   templateUrl: './crear-articulo.component.html',
-  styleUrls: ['./crear-articulo.component.css'],
+  styleUrls: ['./crear-articulo.component.css', '../../app.component.css'],
 })
 @Injectable({
   providedIn: 'root',
