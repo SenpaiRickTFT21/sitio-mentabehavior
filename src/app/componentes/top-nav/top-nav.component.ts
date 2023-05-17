@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TestModalComponent } from '../testmodal/testmodal.component';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-nav',
@@ -34,7 +35,13 @@ export class TopNavComponent implements OnInit {
     private modalService: NgbModal
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.isCollapsed = true;
+      });
+  }
 
   open() {
     const modalRef = this.modalService.open(TestModalComponent);
