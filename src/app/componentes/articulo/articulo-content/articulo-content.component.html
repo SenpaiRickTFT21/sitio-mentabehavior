@@ -46,6 +46,10 @@
                       *ngIf="documento.fileType.includes('pdf')"
                       src="./assets/img/pdf.png"
                     />
+                    <img
+                      *ngIf="documento.fileType.includes('doc')"
+                      src="./assets/img/380px-Icon-doc.svg.png"
+                    />
                   </div>
                   <p>{{ documento.fileName.split(".")[0] }}</p>
                 </a>
