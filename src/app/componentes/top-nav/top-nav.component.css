@@ -202,10 +202,7 @@ nav a {
   nav {
     padding: 1rem 3rem 1rem 1.5rem;
   }
-  #navbarNav2 {
-    flex-direction: column !important;
-    align-items: flex-end;
-  }
+
   .profile-container {
     left: 10%;
     right: 10%;
@@ -213,7 +210,28 @@ nav a {
   }
 }
 
+@media (max-width: 992px) {
+  nav {
+    padding: 1rem;
+  }
+  .navbar-brand {
+    padding: 0.5rem;
+  }
+  a {
+    font-size: 0.85rem;
+    padding: 0.25rem;
+  }
+  .nav-item {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (max-width: 767.98px) {
+  .navbar-nav {
+    height: auto;
+    align-items: first baseline;
+    gap: 1rem;
+  }
   nav {
     padding: 1rem 0.75rem;
     margin-top: 0;
