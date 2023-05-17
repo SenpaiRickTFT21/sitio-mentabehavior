@@ -1,13 +1,8 @@
 <nav
-  *ngIf="loggedIn !== undefined"
   class="navbar navbar-expand-lg navbar-dark navbar-expand-md nav-bckg-color"
   data-bs-theme="dark"
   [class.collapsed-background]="!isCollapsed"
-  [class.nav-bckg-transparent]="
-    currentRoute.includes('articulo/') ||
-    currentRoute.includes('login') ||
-    currentRoute === '/'
-  "
+  [class.nav-bckg-transparent]="fondoTransparente()"
 >
   <div class="container-fluid">
     <a
