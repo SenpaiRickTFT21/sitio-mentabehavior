@@ -1,0 +1,208 @@
+.
+├── README.md
+├── angular.json
+├── database.rules.json
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── folder-structure.txt
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── app
+│   │   ├── _helpers
+│   │   │   └── auth.guard.ts
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── componentes
+│   │   │   ├── articulo
+│   │   │   │   ├── articulo-content
+│   │   │   │   │   ├── articulo-content.component.html
+│   │   │   │   │   ├── articulo-content.component.scss
+│   │   │   │   │   ├── articulo-content.component.spec.ts
+│   │   │   │   │   └── articulo-content.component.ts
+│   │   │   │   ├── articulo.component.css
+│   │   │   │   ├── articulo.component.html
+│   │   │   │   ├── articulo.component.spec.ts
+│   │   │   │   ├── articulo.component.ts
+│   │   │   │   ├── articulo.module.ts
+│   │   │   │   └── safe-html.pipe.ts
+│   │   │   ├── autenticacion
+│   │   │   │   ├── autenticacion.module.ts
+│   │   │   │   ├── login
+│   │   │   │   │   ├── login.component.css
+│   │   │   │   │   ├── login.component.html
+│   │   │   │   │   ├── login.component.spec.ts
+│   │   │   │   │   └── login.component.ts
+│   │   │   │   └── registrar-user
+│   │   │   │       ├── registrar-user.component.css
+│   │   │   │       ├── registrar-user.component.html
+│   │   │   │       ├── registrar-user.component.spec.ts
+│   │   │   │       └── registrar-user.component.ts
+│   │   │   ├── contactos
+│   │   │   │   ├── card
+│   │   │   │   │   ├── card.component.css
+│   │   │   │   │   ├── card.component.html
+│   │   │   │   │   ├── card.component.spec.ts
+│   │   │   │   │   └── card.component.ts
+│   │   │   │   ├── contactos.component.css
+│   │   │   │   ├── contactos.component.html
+│   │   │   │   ├── contactos.component.spec.ts
+│   │   │   │   ├── contactos.component.ts
+│   │   │   │   ├── contactos.module.ts
+│   │   │   │   └── mapa
+│   │   │   │       ├── mapa.component.css
+│   │   │   │       ├── mapa.component.html
+│   │   │   │       ├── mapa.component.spec.ts
+│   │   │   │       └── mapa.component.ts
+│   │   │   ├── crear-articulo
+│   │   │   │   ├── crear-articulo.component.css
+│   │   │   │   ├── crear-articulo.component.html
+│   │   │   │   ├── crear-articulo.component.spec.ts
+│   │   │   │   └── crear-articulo.component.ts
+│   │   │   ├── footer
+│   │   │   │   ├── footer.component.css
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.spec.ts
+│   │   │   │   └── footer.component.ts
+│   │   │   ├── home-landing
+│   │   │   │   ├── billboard
+│   │   │   │   │   ├── billboard.component.css
+│   │   │   │   │   ├── billboard.component.html
+│   │   │   │   │   ├── billboard.component.spec.ts
+│   │   │   │   │   └── billboard.component.ts
+│   │   │   │   ├── destacados
+│   │   │   │   │   ├── destacados.component.css
+│   │   │   │   │   ├── destacados.component.html
+│   │   │   │   │   ├── destacados.component.spec.ts
+│   │   │   │   │   └── destacados.component.ts
+│   │   │   │   ├── home-landing.component.css
+│   │   │   │   ├── home-landing.component.html
+│   │   │   │   ├── home-landing.component.spec.ts
+│   │   │   │   ├── home-landing.component.ts
+│   │   │   │   ├── home-landing.module.ts
+│   │   │   │   └── supporting-section
+│   │   │   │       ├── supporting-section.component.html
+│   │   │   │       ├── supporting-section.component.scss
+│   │   │   │       ├── supporting-section.component.spec.ts
+│   │   │   │       └── supporting-section.component.ts
+│   │   │   ├── secciones
+│   │   │   │   ├── seccion
+│   │   │   │   │   ├── seccion.component.css
+│   │   │   │   │   ├── seccion.component.html
+│   │   │   │   │   ├── seccion.component.spec.ts
+│   │   │   │   │   └── seccion.component.ts
+│   │   │   │   ├── secciones.component.css
+│   │   │   │   ├── secciones.component.html
+│   │   │   │   ├── secciones.component.spec.ts
+│   │   │   │   ├── secciones.component.ts
+│   │   │   │   └── secciones.module.ts
+│   │   │   ├── testmodal
+│   │   │   │   ├── testmodal.component.css
+│   │   │   │   ├── testmodal.component.html
+│   │   │   │   ├── testmodal.component.spec.ts
+│   │   │   │   └── testmodal.component.ts
+│   │   │   ├── tests
+│   │   │   │   ├── animations-test
+│   │   │   │   │   └── slide-right.animation.ts
+│   │   │   │   ├── resultado
+│   │   │   │   │   ├── resultado.component.css
+│   │   │   │   │   ├── resultado.component.html
+│   │   │   │   │   ├── resultado.component.spec.ts
+│   │   │   │   │   └── resultado.component.ts
+│   │   │   │   ├── test-adulto
+│   │   │   │   │   ├── test-adulto.component.css
+│   │   │   │   │   ├── test-adulto.component.html
+│   │   │   │   │   ├── test-adulto.component.spec.ts
+│   │   │   │   │   └── test-adulto.component.ts
+│   │   │   │   ├── test-nino
+│   │   │   │   │   ├── test-nino.component.css
+│   │   │   │   │   ├── test-nino.component.html
+│   │   │   │   │   ├── test-nino.component.spec.ts
+│   │   │   │   │   └── test-nino.component.ts
+│   │   │   │   ├── tests.component.css
+│   │   │   │   ├── tests.component.html
+│   │   │   │   ├── tests.component.ts
+│   │   │   │   └── tests.module.ts
+│   │   │   └── top-nav
+│   │   │       ├── top-nav.component.css
+│   │   │       ├── top-nav.component.html
+│   │   │       ├── top-nav.component.spec.ts
+│   │   │       ├── top-nav.component.ts
+│   │   │       └── top-nav.module.ts
+│   │   ├── models
+│   │   │   └── articulo.ts
+│   │   └── services
+│   │       ├── articulo.service.ts
+│   │       └── user.service.ts
+│   ├── assets
+│   │   ├── favicon_io
+│   │   │   ├── android-chrome-192x192.png
+│   │   │   ├── android-chrome-512x512.png
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── favicon-16x16.png
+│   │   │   ├── favicon-32x32.png
+│   │   │   ├── favicon.ico
+│   │   │   └── site.webmanifest
+│   │   └── img
+│   │       ├── Free Photo Back to school background with school supplies and copy space.html
+│   │       ├── art_1.jpeg
+│   │       ├── billgates.jpeg
+│   │       ├── brain-bg.jpg
+│   │       ├── brain-tree-tall.jpg
+│   │       ├── brain-tree-tall.png
+│   │       ├── brain-tree.png
+│   │       ├── contactos-header-img.jpg
+│   │       ├── electrodos.jpg
+│   │       ├── elefantitoyay.jpeg
+│   │       ├── footer-2.jpg
+│   │       ├── footer.png
+│   │       ├── foro-tdah-img.jpeg
+│   │       ├── joven-patineta.jpeg
+│   │       ├── jovenes-img-header.jpeg
+│   │       ├── jovenes-img-header.png
+│   │       ├── jovenes.jpeg
+│   │       ├── login-backg.jpg
+│   │       ├── login-backg.png
+│   │       ├── login-bckg.jpg
+│   │       ├── logo-mobile.png
+│   │       ├── map-pin-icon.svg
+│   │       ├── mappin.png
+│   │       ├── mental-b-logo-hor-white.png
+│   │       ├── mental-b-logo.png
+│   │       ├── mentalb_navbar_logo.png
+│   │       ├── mentalb_navbar_logoAsset 7.png
+│   │       ├── mente-acuarela.jpg
+│   │       ├── niño-cabezaexplota-bw.png
+│   │       ├── nino-corre.jpeg
+│   │       ├── nino-corre.png
+│   │       ├── nino-mind.png
+│   │       ├── nino-risa.jpg
+│   │       ├── padres-foro-img.webp
+│   │       ├── padres-secciones.png
+│   │       ├── padres.webp
+│   │       ├── tdah-foro-img.jpeg
+│   │       ├── tdah-img-header.png
+│   │       ├── tdah.avif
+│   │       └── welcome.jpg
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.server.ts
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.scss
+│   └── test.ts
+├── storage.rules
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.server.json
+└── tsconfig.spec.json
+
+34 directories, 172 files

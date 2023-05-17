@@ -31,6 +31,27 @@
           class="recursos-container"
         >
           <h5>Recursos</h5>
+          <hr />
+          <ng-container *ngIf="articulo.documentos">
+            <div class="recurso-item-container">
+              <div *ngFor="let documento of articulo.documentos; let i = index">
+                <a
+                  class="recurso-item"
+                  href="{{ documento.urlDoc }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="recurso-icon">
+                    <img
+                      *ngIf="documento.fileType.includes('pdf')"
+                      src="./assets/img/pdf.png"
+                    />
+                  </div>
+                  <p>{{ documento.fileName.split(".")[0] }}</p>
+                </a>
+              </div>
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>
