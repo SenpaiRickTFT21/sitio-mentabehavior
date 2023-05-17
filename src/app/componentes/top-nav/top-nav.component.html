@@ -8,7 +8,7 @@
     <a
       class="navbar-brand"
       [class.navbar-brand-noshadow]="currentRoute.includes('login')"
-      href=""
+      (click)="navigateTo('/')"
     >
       <img
         [class.logo-collapsed]="!isCollapsed"
